@@ -8,8 +8,8 @@
 /* ---- VARIABLES — modifiez ICI et seulement ICI ---- */
 :root {
   --rose:       #63C4DC;   /* couleur principale — boutons, titres */
-  --rose-d:     #6B1A3E;   /* version rose fonce*/
-  --rose-l:     #B03368;   /* version claire du rose */
+  --rose-d:     #3A8B9E;   /* version bleu fonce*/
+  --rose-l:     #9AE0F0;   /* version claire du bleu*/
   --gold:       #E8943A;   /* couleur accent — or/ambre */
   --gold-l:     #F5B05A;   /* version claire de l'or */
   --cream:      #FDF8F3;   /* fond de page */
