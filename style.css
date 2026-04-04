@@ -1,37 +1,34 @@
 /* ================================================================
    ONCOLOVIE — style.css
-   
-   ► Charte Graphique UX 2026 (Basée sur le logo officiel)
+   ► Charte Graphique UX 2026
    ================================================================ */
 
 :root {
   /* Couleurs Logo Oncolovie */
-  --logo-blue:  #68B4DF; /* Bleu du logo */
-  --logo-pink:  #D44A64; /* Rose/Rouge du logo */
+  --logo-blue:  #68B4DF;
+  --logo-pink:  #D44A64;
 
-  /* Mapping avec tes classes existantes pour ne rien casser dans le HTML */
+  /* Variables principales */
   --rose:       var(--logo-blue);   
-  --rose-d:     #2D7B9E;   /* Bleu foncé pour les hovers et fonds */
-  --rose-l:     #A5D4EF;   /* Bleu clair pour dégradés */
-
+  --rose-d:     #2D7B9E;   
+  --rose-l:     #A5D4EF;   
   --gold:       var(--logo-pink);   
-  --gold-d:     #A1354A;   /* Rose foncé pour les hovers */
-  --gold-l:     #F3A9B7;   /* Rose clair pour dégradés */
+  --gold-d:     #A1354A;   
+  --gold-l:     #F3A9B7;   
 
-  /* Fonds et Textes UX 2026 (Plus clairs, plus froids) */
-  --cream:      #FCFDFF;   /* Fond de page principal (blanc très pur) */
-  --cream2:     #F4F8FA;   /* Fond sections alternées (légèrement bleuté) */
+  /* Fonds et Textes */
+  --cream:      #FCFDFF;   
+  --cream2:     #F4F8FA;   
   --white:      #FFFFFF;
-  --ink:        #1A2A32;   /* Texte principal - gris/bleu très foncé */
-  --muted:      #607580;   /* Texte secondaire */
-  --border:     #E1E8EC;   /* Bordures discrètes */
+  --ink:        #1A2A32;   
+  --muted:      #607580;   
+  --border:     #E1E8EC;   
 
   --font-titre: 'Playfair Display', serif;
   --font-corps: 'Inter', sans-serif;
   --radius:     14px;
   --radius-lg:  24px;
   
-  /* Ombres avec la teinte bleue du logo (104, 180, 223 en RGB) */
   --shadow:     0 4px 24px rgba(104, 180, 223, 0.12);
   --shadow-lg:  0 12px 48px rgba(104, 180, 223, 0.20);
 }
@@ -55,6 +52,7 @@ img { max-width: 100%; }
 /* ---- UTILITAIRES ---- */
 .tag { display: inline-flex; align-items: center; gap: .35rem; font-size: .7rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: .6rem; }
 .tag::before { content: ''; display: block; width: 22px; height: 2px; background: var(--gold); border-radius: 2px; }
+.tag.center { justify-content: center; }
 .divider { width: 44px; height: 3px; background: var(--gold); border-radius: 2px; margin: .9rem 0 1.4rem; }
 .divider.center { margin-left: auto; margin-right: auto; }
 .sec    { padding: 5.5rem 0; }
@@ -239,3 +237,20 @@ footer li a:hover { color: var(--rose-l); }
   .don-banner { padding: 2.5rem 1.2rem; }
   .page-hero { padding: 7rem 0 4rem; }
 }
+
+/* Classes utilitaires ajoutées pour nettoyage HTML */
+.img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(10, 27, 36, 0.7), rgba(104, 180, 223, 0.3));
+  display: flex; align-items: flex-end; padding: 2rem; border-radius: 20px;
+}
+.img-overlay h3, .img-overlay p { color: #fff; }
+.footer-link { color: rgba(255,255,255,.45); }
+.footer-link:hover { color: var(--gold); }
+.foot-nr { color: rgba(255,255,255,.22); }
+.txt-italic-rose { font-style: italic; color: var(--rose-d); font-size: 1.05rem; }
+.txt-small-muted { font-size: .85rem; margin-bottom: 0; }
+.list-clean { list-style: none; padding: 0; }
+.list-clean li { padding: .4rem 0; border-bottom: 1px solid var(--border); }
+.list-clean li:last-child { border-bottom: none; }
+.box-highlight { background: var(--cream2); border-radius: 12px; border-left: 4px solid var(--gold); padding: 1rem; margin-top: 1rem; }
