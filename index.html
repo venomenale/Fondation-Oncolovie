@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -47,6 +48,7 @@
 </nav>
 
 <!-- HERO -->
+
 <section class="hero">
   <div class="hero-bg" style="background-image:url('images/hero-bg.png');"></div>
   <div class="hero-glow"></div>
@@ -70,17 +72,20 @@
 </section>
 
 <!-- STATS -->
+
 <div class="stats">
   <div class="container p-0">
     <div class="stats-grid">
       <div class="stat"><div class="num">6</div><div class="lbl">Projets actifs</div></div>
       <div class="stat"><div class="num">100%</div><div class="lbl">Dons aux projets</div></div>
+      <div class="stat"><div class="num">CHC</div><div class="lbl">Partenaire hospitalier</div></div>
       <div class="stat"><div class="num">Liège</div><div class="lbl">Région liégeoise</div></div>
     </div>
   </div>
 </div>
 
 <!-- NOS PROJETS — BENTO -->
+
 <section class="sec">
   <div class="container">
     <div class="fu">
@@ -128,6 +133,7 @@
 </section>
 
 <!-- ACTUALITÉS -->
+
 <section class="sec bg-warm">
   <div class="container">
     <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-4 fu">
@@ -147,6 +153,7 @@
 </section>
 
 <!-- ÉVÉNEMENTS -->
+
 <section class="sec">
   <div class="container">
     <div class="row gy-5 align-items-start">
@@ -190,6 +197,7 @@
 </section>
 
 <!-- DON -->
+
 <section class="sec bg-warm">
   <div class="container">
     <div class="row align-items-center gy-5">
@@ -247,7 +255,7 @@
         <h5>Coordonnées</h5>
         <p style="font-size:.85rem;">Clos Perly 14b – 4052 Chaudfontaine<br>
           <a href="mailto:info@oncolovie.be" style="color:rgba(255,255,255,.45);">info@oncolovie.be</a></p>
-        <p style="font-size:.74rem;margin-top:.6rem;color:rgba(255,255,255,.22);">N° d'entreprise : 0762.941.820</p>
+        <p style="font-size:.74rem;color:rgba(255,255,255,.22);margin-top:.6rem;">N° d'entreprise : 0762.941.820</p>
       </div>
     </div>
     <div class="foot-bottom">
@@ -262,23 +270,24 @@ const navEl = document.getElementById('nav');
 if(navEl) window.addEventListener('scroll', function(){ navEl.classList.toggle('solid', window.scrollY > 50); });
 
 function toggleNav(){
-  document.getElementById('navlinks').classList.toggle('open');
+document.getElementById(‘navlinks’).classList.toggle(‘open’);
 }
 
 const obs = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); });
+entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add(‘in’); });
 }, {threshold: 0.1});
-document.querySelectorAll('.fu').forEach(function(el){ obs.observe(el); });
+document.querySelectorAll(’.fu’).forEach(function(el){ obs.observe(el); });
 
-document.querySelectorAll('.amt').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    document.querySelectorAll('.amt').forEach(function(b){ b.classList.remove('on'); });
-    this.classList.add('on');
-    var inp = document.getElementById('don-input');
-    if(inp && this.dataset.val) inp.value = this.dataset.val;
-  });
+document.querySelectorAll(’.amt’).forEach(function(btn){
+btn.addEventListener(‘click’, function(){
+document.querySelectorAll(’.amt’).forEach(function(b){ b.classList.remove(‘on’); });
+this.classList.add(‘on’);
+var inp = document.getElementById(‘don-input’);
+if(inp && this.dataset.val) inp.value = this.dataset.val;
+});
 });
 </script>
+
 <script>
 function fmtDate(s){ return new Date(s).toLocaleDateString('fr-BE',{day:'numeric',month:'long',year:'numeric'}); }
 function buildCard(item){
@@ -298,5 +307,6 @@ fetch('./news.json')
     if(grid) grid.innerHTML = '<div class="col-12 text-center py-4"><p>Actualités bientôt disponibles.</p></div>';
   });
 </script>
+
 </body>
 </html>
