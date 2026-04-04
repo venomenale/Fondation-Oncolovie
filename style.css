@@ -54,8 +54,8 @@ img { max-width: 100%; }
 
 /* ---- BOUTONS ---- */
 .btn { display: inline-flex; align-items: center; gap: .5rem; padding: .85rem 2rem; border-radius: 50px; font-weight: 600; font-size: .9rem; border: none; cursor: pointer; transition: .25s; text-decoration: none !important; line-height: 1; }
-.btn-rose  { background: var(--rose); color: #fff !important; box-shadow: 0 4px 18px rgba(139,34,82,.28); }
-.btn-rose:hover  { background: var(--rose-d); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(139,34,82,.35); color: #fff !important; }
+.btn-rose  { background: var(--rose); color: #fff !important; box-shadow: 0 4px 18px rgba(99,196,220,.28); }
+.btn-rose:hover  { background: var(--rose-d); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(99,196,220,.35); color: #fff !important; }
 .btn-gold  { background: var(--gold); color: #fff !important; box-shadow: 0 4px 18px rgba(232,148,58,.3); }
 .btn-gold:hover  { background: var(--gold-l); transform: translateY(-2px); color: #fff !important; }
 .btn-outline { background: transparent; color: var(--rose) !important; border: 2px solid var(--rose); }
@@ -96,7 +96,7 @@ img { max-width: 100%; }
 }
 
 /* ---- HERO ---- */
-.hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; background: linear-gradient(150deg, #3D0A24 0%, #6B1A3E 40%, #2A0E1E 100%); }
+.hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; background: linear-gradient(150deg, #0A1B24 0%, var(--rose-d) 40%, #051015 100%); }
 .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: .18; mix-blend-mode: luminosity; }
 .hero-glow { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(232,148,58,.15) 0%, transparent 70%); right: -100px; top: 50%; transform: translateY(-50%); pointer-events: none; }
 .hero-ring { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 500px; height: 500px; border: 1px solid rgba(232,148,58,.12); border-radius: 50%; pointer-events: none; }
@@ -162,7 +162,7 @@ img { max-width: 100%; }
 .event-loc svg { width: 10px; height: 10px; }
 
 /* ---- DON BANNER ---- */
-.don-banner { background: linear-gradient(135deg, #3D0A24 0%, #6B1A3E 50%, #8B4513 100%); border-radius: var(--radius-lg); padding: 3.5rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
+.don-banner { background: linear-gradient(135deg, #0A1B24 0%, var(--rose-d) 50%, #2A4B5A 100%); border-radius: var(--radius-lg); padding: 3.5rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
 .don-banner::before { content: '♥'; position: absolute; font-size: 14rem; opacity: .04; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #fff; pointer-events: none; }
 .don-banner h2 { color: #fff; font-style: italic; }
 .don-banner .sub { color: rgba(255,255,255,.65); max-width: 460px; margin: .8rem auto 0; }
@@ -177,7 +177,7 @@ img { max-width: 100%; }
 .form-card { background: var(--white); border-radius: var(--radius-lg); padding: 2.2rem; border: 1px solid var(--border); }
 
 /* ---- PAGE HERO ---- */
-.page-hero { padding: 8rem 0 5rem; background: linear-gradient(150deg, #3D0A24 0%, #6B1A3E 100%); position: relative; overflow: hidden; }
+.page-hero { padding: 8rem 0 5rem; background: linear-gradient(150deg, #0A1B24 0%, var(--rose-d) 100%); position: relative; overflow: hidden; }
 .page-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 70px; background: var(--cream); clip-path: ellipse(55% 100% at 50% 100%); }
 .page-hero h1 { color: #fff; }
 .page-hero .lead { color: rgba(255,255,255,.65); }
@@ -205,7 +205,7 @@ img { max-width: 100%; }
 .quote { border-left: 4px solid var(--gold); padding: 1.2rem 1.5rem; background: var(--cream2); border-radius: 0 12px 12px 0; font-family: var(--font-titre); font-size: 1.25rem; font-style: italic; color: var(--rose-d); line-height: 1.5; }
 
 /* ---- FOOTER ---- */
-footer { background: #1A0810; color: rgba(255,255,255,.55); padding: 3.5rem 0 1.8rem; }
+footer { background: #0A1116; color: rgba(255,255,255,.55); padding: 3.5rem 0 1.8rem; }
 .foot-brand { font-family: var(--font-titre); font-size: 1.7rem; font-weight: 700; color: #fff; }
 .foot-sub { font-size: .72rem; letter-spacing: .1em; color: rgba(255,255,255,.3); text-transform: uppercase; }
 footer h5 { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
