@@ -7,8 +7,8 @@
 
 /* ---- VARIABLES — modifiez ICI et seulement ICI ---- */
 :root {
-  --rose:       #8B2252;   /* couleur principale — boutons, titres */
-  --rose-d:     #63C4DC;   /* version turquoise*/
+  --rose:       #63C4DC;   /* couleur principale — boutons, titres */
+  --rose-d:     #6B1A3E;   /* version rose fonce*/
   --rose-l:     #B03368;   /* version claire du rose */
   --gold:       #E8943A;   /* couleur accent — or/ambre */
   --gold-l:     #F5B05A;   /* version claire de l'or */
