@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Don — Oncolovie</title>
+  <meta name="description" content="Contactez la Fondation Oncolovie ou faites un don pour soutenir les patients oncologiques en région liégeoise.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar-onco scrolled" id="mainNav">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg p-0" style="background:transparent;">
+      <a class="navbar-brand" href="index.html">
+        Oncolovie
+        <span class="brand-sub">Fondation</span>
+      </a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-center gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="la-fondation.html">La Fondation</a></li>
+          <li class="nav-item"><a class="nav-link" href="projets.html">Nos projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="actualites.html">Actualités</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-2">
+            <a class="btn-nav-don nav-link" href="#don">❤ Faire un don</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+
+<section class="page-hero">
+  <div class="container" style="position:relative;z-index:2;">
+    <nav aria-label="breadcrumb" class="mb-3">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+        <li class="breadcrumb-item active">Contact</li>
+      </ol>
+    </nav>
+    <h1>Contact & Don</h1>
+    <p class="mt-3">Une question ? Envie de nous soutenir ou de rejoindre nos bénévoles ? On vous répond avec plaisir.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section-lg">
+  <div class="container">
+    <div class="row gy-5">
+      <!-- Infos contact -->
+      <div class="col-lg-4">
+        <span class="section-label">Nous trouver</span>
+        <h2 class="mb-4">Informations de contact</h2>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+          </div>
+          <div>
+            <div style="font-weight:600;color:var(--text);font-size:.95rem;">Adresse</div>
+            <p style="margin-top:.2rem;font-size:.9rem;">Chaudfontaine<br>Région liégeoise, Belgique</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+          </div>
+          <div>
+            <div style="font-weight:600;color:var(--text);font-size:.95rem;">Email</div>
+            <a href="mailto:info@oncolovie.be" style="font-size:.9rem;">info@oncolovie.be</a>
+          </div>
+        </div>
+
+```
+    <div class="mt-4 p-3" style="background:var(--bg2);border-radius:12px;border:1px solid var(--border);">
+      <div style="font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);">Devenir bénévole</div>
+      <p style="font-size:.88rem;margin-top:.5rem;" id="benevole">Vous souhaitez rejoindre notre équipe de bénévoles ? Utilisez le formulaire ci-contre en précisant votre intérêt dans le message.</p>
+    </div>
+  </div>
+
+  <!-- Formulaire contact -->
+  <div class="col-lg-7 offset-lg-1">
+    <div style="background:var(--card);border-radius:16px;padding:2.5rem;border:1px solid var(--border);">
+      <h3 class="mb-4">Envoyez-nous un message</h3>
+      <!-- Remplacez YOUR_FORM_ID par votre ID Formspree (gratuit sur formspree.io) -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label class="form-label-custom" for="prenom">Prénom *</label>
+            <input type="text" id="prenom" name="prenom" class="form-control-custom" required placeholder="Marie">
+          </div>
+          <div class="col-sm-6">
+            <label class="form-label-custom" for="nom">Nom *</label>
+            <input type="text" id="nom" name="nom" class="form-control-custom" required placeholder="Dupont">
+          </div>
+          <div class="col-12">
+            <label class="form-label-custom" for="email">Email *</label>
+            <input type="email" id="email" name="email" class="form-control-custom" required placeholder="marie@exemple.be">
+          </div>
+          <div class="col-12">
+            <label class="form-label-custom" for="sujet">Sujet</label>
+            <select id="sujet" name="sujet" class="form-control-custom">
+              <option value="">Choisir un sujet</option>
+              <option value="information">Demande d'information</option>
+              <option value="benevole">Devenir bénévole</option>
+              <option value="partenariat">Partenariat</option>
+              <option value="presse">Presse / Médias</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label class="form-label-custom" for="message">Message *</label>
+            <textarea id="message" name="message" class="form-control-custom" rows="5" required placeholder="Votre message…" style="resize:vertical;"></textarea>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn-primary-custom w-100">Envoyer le message</button>
+          </div>
+        </div>
+      </form>
+      <div id="form-success" style="display:none;background:#e8f5e9;border-radius:10px;padding:1.2rem;margin-top:1rem;color:#2e7d32;font-size:.9rem;">
+        ✓ Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- DON SECTION -->
+
+<section class="section-lg bg-warm" id="don">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-5">
+        <span class="section-label">Soutenez-nous</span>
+        <h2>Faire un don</h2>
+        <div class="divider"></div>
+        <p>Chaque don, quel que soit son montant, finance directement nos projets d'accompagnement des patients oncologiques en région liégeoise.</p>
+        <div class="mt-4">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div style="width:40px;height:40px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <p style="margin:0;font-size:.9rem;">Don déductible fiscalement</p>
+          </div>
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div style="width:40px;height:40px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <p style="margin:0;font-size:.9rem;">Reçu fiscal envoyé automatiquement</p>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <div style="width:40px;height:40px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <p style="margin:0;font-size:.9rem;">100% versé à nos projets, sans intermédiaire</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 offset-lg-1">
+        <div style="background:var(--card);border-radius:16px;padding:2.5rem;border:1px solid var(--border);">
+          <h4 class="mb-4">Choisissez votre montant</h4>
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <button class="don-amount-btn" onclick="selectDon(this,25)" style="color:var(--primary);border-color:var(--border);">25 €</button>
+            <button class="don-amount-btn active" onclick="selectDon(this,50)" style="">50 €</button>
+            <button class="don-amount-btn" onclick="selectDon(this,100)" style="color:var(--primary);border-color:var(--border);">100 €</button>
+            <button class="don-amount-btn" onclick="selectDon(this,250)" style="color:var(--primary);border-color:var(--border);">250 €</button>
+          </div>
+          <div class="mb-4">
+            <label class="form-label-custom">Ou saisissez un montant libre</label>
+            <div style="position:relative;">
+              <input type="number" id="donMontant" class="form-control-custom" value="50" min="5" placeholder="Montant en €">
+              <span style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);font-weight:600;color:var(--text-muted);">€</span>
+            </div>
+          </div>
+          <p style="font-size:.82rem;margin-bottom:1rem;color:var(--text-muted);">
+            Pour effectuer votre don, veuillez contacter la fondation directement ou utiliser le virement bancaire ci-dessous.
+          </p>
+          <div style="background:var(--bg2);border-radius:8px;padding:1rem;font-size:.85rem;margin-bottom:1.5rem;">
+            <strong>Virement bancaire :</strong><br>
+            <span style="color:var(--text-muted);">Bénéficiaire : Fondation Oncolovie<br>
+            Communication : DON + votre nom<br>
+            <em>(IBAN disponible sur demande par email)</em></span>
+          </div>
+          <a href="mailto:info@oncolovie.be?subject=Don Fondation Oncolovie" class="btn-accent-custom d-block text-center">
+            ❤ Faire un don par virement
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-4">
+        <div class="footer-logo">Oncolovie</div>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.35);margin-top:.3rem;">Fondation privée · Chaudfontaine</p>
+        <p style="font-size:.88rem;margin-top:1rem;">Soutien et accompagnement des patients oncologiques et de leur entourage en région liégeoise.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="la-fondation.html">La Fondation</a></li>
+          <li><a href="projets.html">Nos projets</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5>Agir</h5>
+        <ul>
+          <li><a href="#don">Faire un don</a></li>
+          <li><a href="#benevole">Devenir bénévole</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5>Contact</h5>
+        <p style="font-size:.88rem;">Chaudfontaine, Région liégeoise<br>Belgique</p>
+        <p style="font-size:.88rem;margin-top:.75rem;"><a href="mailto:info@oncolovie.be" style="color:rgba(255,255,255,.5);">info@oncolovie.be</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex justify-content-between flex-wrap gap-2">
+      <span>© 2026 Fondation Oncolovie. Tous droits réservés.</span>
+      <span>Site réalisé par <a href="#" style="color:rgba(255,255,255,.4);">Essam</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+function selectDon(btn, montant) {
+  document.querySelectorAll('.don-amount-btn').forEach(b => {
+    b.classList.remove('active');
+    b.style.color = 'var(--primary)';
+    b.style.borderColor = 'var(--border)';
+  });
+  btn.classList.add('active');
+  btn.style.color = '';
+  btn.style.borderColor = '';
+  document.getElementById('donMontant').value = montant;
+}
+
+// Formspree AJAX
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  btn.textContent = 'Envoi en cours…';
+  btn.disabled = true;
+  try {
+    const res = await fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      this.reset();
+      document.getElementById('form-success').style.display = 'block';
+    } else {
+      btn.textContent = 'Erreur — réessayez';
+      btn.disabled = false;
+    }
+  } catch {
+    btn.textContent = 'Erreur réseau — réessayez';
+    btn.disabled = false;
+  }
+});
+</script>
+
+</body>
+</html>
