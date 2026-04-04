@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "date": "2026-04-16",
+    "titre": "16 avril 2026 : Une soirée exceptionnelle aux couleurs de Starmania",
+    "extrait": "La Fondation Oncolovie vous invite à une soirée musicale inoubliable placée sous le signe de Starmania, l'opéra-rock mythique de Michel Berger et Luc Plamondon.",
+    "tag": "Événement",
+    "image": "images/vignette-billeterie-ok--450x255.png",
+    "lien": "actualites.html"
+  },
+  {
+    "id": 2,
+    "date": "2026-05-30",
+    "titre": "30 mai 2026 : Relais pour la vie – Seraing",
+    "extrait": "Rejoignez l'équipe Oncolovie au Relais pour la Vie de Seraing. Envie de vous mobiliser pour une cause qui nous concerne tous ?",
+    "tag": "Événement",
+    "image": "images/480328726_630897666358018_6235582993602805633_n-450x255.jpg",
+    "lien": "actualites.html"
+  },
+  {
+    "id": 3,
+    "date": "2026-05-29",
+    "titre": "29 mai 2026 : 4ème édition du tournoi de golf Oncolovie",
+    "extrait": "Pour sa quatrième année consécutive, la fondation organise son tournoi de golf. Les bénéfices seront intégralement consacrés à la poursuite de nos projets.",
+    "tag": "Événement",
+    "image": "images/Oncolovie_golf-40-450x255.jpg",
+    "lien": "actualites.html"
+  },
+  {
+    "id": 4,
+    "date": "2025-11-27",
+    "titre": "Deux soirées solidaires au profit d'Oncolovie : retour sur une mobilisation généreuse",
+    "extrait": "La Fondation privée Oncolovie a eu la chance de pouvoir compter sur l'engagement et la générosité d'artistes et de nombreux supporters.",
+    "tag": "Actualité",
+    "image": "images/image00009-scaled-e1771251031908-450x255.jpeg",
+    "lien": "actualites.html"
+  },
+  {
+    "id": 5,
+    "date": "2025-05-23",
+    "titre": "Tournoi de golf Oncolovie 2025 : une belle édition grâce à vous !",
+    "extrait": "Le vendredi 23 mai dernier s'est tenue la 3ème édition de notre tournoi de golf au profit de la Fondation. Un grand merci à tous les participants !",
+    "tag": "Actualité",
+    "image": "images/Oncolovie_golf_2-98-min-450x255.jpg",
+    "lien": "actualites.html"
+  }
+]
