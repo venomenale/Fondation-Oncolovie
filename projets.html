@@ -4,48 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nos Projets — Oncolovie</title>
-  <meta name="description" content="L'ESPACE+ : un lieu d'écoute et d'activités dédié aux patients oncologiques du CHC en région liégeoise.">
-  <!-- Bootstrap -->
+  <title>Nos projets — Oncolovie</title>
+  <meta name="description" content="Découvrez les 6 projets de la Fondation Oncolovie pour accompagner les patients oncologiques.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <!-- Styles custom -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-
 <nav class="navbar-onco scrolled" id="mainNav">
   <div class="container">
     <nav class="navbar navbar-expand-lg p-0" style="background:transparent;">
-      <a class="navbar-brand" href="index.html">
-        Oncolovie
-        <span class="brand-sub">Fondation</span>
-      </a>
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a class="navbar-brand" href="index.html">Oncolovie<span class="brand-sub">Fondation privée</span></a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto align-items-center gap-1">
           <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
           <li class="nav-item"><a class="nav-link" href="la-fondation.html">La Fondation</a></li>
-          <li class="nav-item"><a class="nav-link active" href="projets.html">Nos projets</a></li>
-          <li class="nav-item"><a class="nav-link" href="actualites.html">Actualités</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" href="projets.html" role="button" data-bs-toggle="dropdown">Nos projets</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="projets.html#bons-cadeaux">Bons cadeaux pour aidants proches</a></li><li><a class="dropdown-item" href="projets.html#soins-palliatifs">Les soins palliatifs</a></li><li><a class="dropdown-item" href="projets.html#psychomotricite">Module de psychomotricité</a></li><li><a class="dropdown-item" href="projets.html#aide-financiere">Aide financière aux parents</a></li><li><a class="dropdown-item" href="projets.html#reflexologie">Réflexologie plantaire</a></li><li><a class="dropdown-item" href="projets.html#bien-etre-had">Bien-être et HAD</a></li></ul></li>
+          <li class="nav-item"><a class="nav-link" href="agenda.html">Agenda</a></li>
+          <li class="nav-item"><a class="nav-link" href="actualites.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="historique.html">Historique</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="soutien.html" role="button" data-bs-toggle="dropdown">Soutien</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="soutien.html#don">Faites un don</a></li><li><a class="dropdown-item" href="soutien.html#donation">Effectuez une donation</a></li><li><a class="dropdown-item" href="soutien.html#legs">Legs en duo</a></li></ul></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-2">
-            <a class="btn-nav-don nav-link" href="contact.html#don">❤ Faire un don</a>
-          </li>
+          <li class="nav-item ms-2"><a class="btn-nav-don nav-link" href="soutien.html#don">❤ Faire un don</a></li>
         </ul>
       </div>
     </nav>
   </div>
 </nav>
-
-<!-- PAGE HERO -->
 
 <section class="page-hero">
   <div class="container" style="position:relative;z-index:2;">
@@ -56,111 +45,141 @@
       </ol>
     </nav>
     <h1>Nos projets</h1>
-    <p class="mt-3">Des initiatives concrètes pour améliorer la qualité de vie des patients et de leur entourage.</p>
+    <p class="lead mt-2">Des initiatives concrètes pour accompagner les patients à chaque étape de leur parcours.</p>
   </div>
 </section>
 
-<!-- ESPACE+ -->
-
-<section class="section-lg" id="espace-plus">
+<section class="section-lg">
   <div class="container">
-    <div class="row align-items-center gy-5">
-      <div class="col-lg-6 fade-up">
-        <div class="project-tag" style="background:rgba(123,45,66,.1);color:var(--primary);">Projet phare</div>
-        <h2 class="mt-2">L'ESPACE+</h2>
-        <div class="divider"></div>
-        <p class="lead">Un lieu d'écoute et d'activités dédié aux patients en Onco-Hématologie au CHC, conçu pour soigner le psychique afin de mieux soigner le physique.</p>
-        <p class="mt-3">L'ESPACE+ est une initiative du service d'Onco-Hématologie du réseau hospitalier du CHC. Il accueille les patients atteints d'une pathologie oncologique qui suivent un traitement de chirurgie, chimiothérapie et/ou de radiothérapie.</p>
-        <p class="mt-3">Le projet a été conçu pour faire face à la maladie en prenant en compte ses aspects <strong>relationnels et psychologiques</strong>, et pas uniquement thérapeutiques — une approche globale et humaine de la guérison.</p>
-      </div>
-      <div class="col-lg-5 offset-lg-1 fade-up fade-up-delay-1">
-        <div style="background:var(--bg2);border-radius:16px;padding:2.5rem;">
-          <h4 class="mb-3">Ce que propose l'ESPACE+</h4>
-          <ul class="feature-list">
-            <li>Espace d'écoute individuel et confidentiel</li>
-            <li>Activités collectives et ateliers thérapeutiques</li>
-            <li>Accompagnement psychologique par des professionnels</li>
-            <li>Soutien à l'entourage (famille, proches aidants)</li>
-            <li>Orientation vers d'autres ressources si nécessaire</li>
-            <li>Accès 100% gratuit pour les patients du CHC</li>
-          </ul>
-          <div class="mt-3 p-3" style="background:white;border-radius:10px;border:1px solid var(--border);">
-            <div style="font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);">Partenaire médical</div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--primary-dark);margin-top:.3rem;">Réseau Hospitalier CHC</div>
-            <div style="font-size:.85rem;color:var(--text-muted);">Service d'Onco-Hématologie · Région liégeoise</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- IMPACT -->
-
-<section class="section-lg bg-warm">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="section-label">Pourquoi c'est essentiel</span>
-      <h2>L'impact de l'ESPACE+</h2>
+    <div class="text-center mb-5 fade-up">
+      <span class="section-label">Nos 6 projets</span>
+      <h2>Des actions concrètes pour les patients</h2>
       <div class="divider divider-center"></div>
-      <p class="lead mx-auto">La recherche est claire : l'accompagnement psychologique améliore les résultats médicaux.</p>
+      <p class="lead mx-auto">Oncolovie développe des actions qui accompagnent les patients à chaque étape de leur parcours de soins.</p>
     </div>
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-4 fade-up">
-        <div class="mission-card text-center">
-          <div class="mission-icon mx-auto">
-            <svg viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
-          </div>
-          <h4 class="mt-3">Réduction de l'anxiété</h4>
-          <p>Les patients accompagnés psychologiquement reportent une anxiété significativement réduite pendant et après les traitements.</p>
-        </div>
-      </div>
-      <div class="col-md-4 fade-up fade-up-delay-1">
-        <div class="mission-card text-center">
-          <div class="mission-icon mx-auto">
-            <svg viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
-          </div>
-          <h4 class="mt-3">Lien social renforcé</h4>
-          <p>Les activités collectives brisent l'isolement, source de souffrance majeure pour les patients oncologiques.</p>
-        </div>
-      </div>
-      <div class="col-md-4 fade-up fade-up-delay-2">
-        <div class="mission-card text-center">
-          <div class="mission-icon mx-auto">
-            <svg viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
-          </div>
-          <h4 class="mt-3">Qualité de vie améliorée</h4>
-          <p>Un meilleur état psychologique favorise l'adhérence aux traitements et améliore la qualité de vie globale.</p>
-        </div>
-      </div>
+
+```
+<div id="bons-cadeaux" class="row align-items-center gy-4 mb-5 pt-4 fade-up">
+  <div class="col-lg-8">
+    <span class="section-label">Projet 1</span>
+    <h3>Des bons cadeaux à l'attention des aidants proches</h3>
+    <div class="divider"></div>
+    <p>Les aidants proches sont souvent oubliés dans le parcours de soin. Oncolovie propose des bons cadeaux destinés à offrir un moment de répit et de bien-être aux personnes qui accompagnent quotidiennement un proche atteint d'un cancer.</p>
+    <p class="mt-2">Ces bons permettent l'accès à des soins, des activités de détente ou des moments de ressourcement, afin que les aidants puissent continuer à soutenir leurs proches dans les meilleures conditions possibles.</p>
+  </div>
+  <div class="col-lg-4"><div class="don-img-section"><img src="images/cta-large.jpg" alt="Bons cadeaux aidants" style="height:250px;"><div class="don-img-content"><h3>Aidants proches</h3></div></div></div>
+</div>
+
+<hr style="border-color:var(--border);margin:3rem 0;">
+
+<div id="soins-palliatifs" class="row align-items-center gy-4 mb-5 fade-up">
+  <div class="col-lg-4 order-lg-1"><div style="background:var(--bg2);border-radius:14px;padding:2rem;border-left:4px solid var(--accent);"><p class="blockquote-custom" style="font-size:1.15rem;">"Accompagner dignement jusqu'au bout du chemin."</p></div></div>
+  <div class="col-lg-8 order-lg-2">
+    <span class="section-label">Projet 2</span>
+    <h3>Les soins palliatifs</h3>
+    <div class="divider"></div>
+    <p>La Fondation Oncolovie s'engage dans le soutien aux soins palliatifs en région liégeoise. Notre action vise à améliorer la qualité de vie des patients en fin de vie et à soutenir leurs familles dans ces moments difficiles.</p>
+    <p class="mt-2">En collaboration avec les équipes médicales, nous contribuons à créer des conditions d'accompagnement dignes, humaines et adaptées aux besoins de chaque personne.</p>
+  </div>
+</div>
+
+<hr style="border-color:var(--border);margin:3rem 0;">
+
+<div id="psychomotricite" class="row align-items-center gy-4 mb-5 fade-up">
+  <div class="col-lg-8">
+    <span class="section-label">Projet 3</span>
+    <h3>Module de psychomotricité</h3>
+    <div class="divider"></div>
+    <p>La psychomotricité propose une approche thérapeutique qui travaille sur le lien entre le corps et le psychisme. Pour les patients oncologiques, souvent éprouvés par les traitements lourds, ces séances permettent de reconnecter avec son corps et de retrouver un sentiment de contrôle et de bien-être.</p>
+    <p class="mt-2">Ce module est proposé en groupe ou en individuel, adapté à l'état de chaque patient, et encadré par des thérapeutes formés spécifiquement à l'accompagnement oncologique.</p>
+  </div>
+  <div class="col-lg-4"><div class="don-img-section"><img src="images/cta-large.jpg" alt="Psychomotricité" style="height:250px;"><div class="don-img-content"><h3>Corps & Psychisme</h3></div></div></div>
+</div>
+
+<hr style="border-color:var(--border);margin:3rem 0;">
+
+<div id="aide-financiere" class="row align-items-center gy-4 mb-5 fade-up">
+  <div class="col-lg-4 order-lg-1">
+    <div style="background:var(--primary-dark);border-radius:14px;padding:2rem;text-align:center;">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--accent);">€</div>
+      <p style="color:rgba(255,255,255,.7);font-size:.9rem;margin-top:.5rem;">Aide financière directe aux familles</p>
     </div>
+  </div>
+  <div class="col-lg-8 order-lg-2">
+    <span class="section-label">Projet 4</span>
+    <h3>Une aide financière à l'attention des parents</h3>
+    <div class="divider"></div>
+    <p>Le cancer d'un enfant représente une épreuve financière considérable pour les familles. Frais de transport, de garde, d'hébergement près des centres de soin… les coûts s'accumulent rapidement.</p>
+    <p class="mt-2">Oncolovie propose une aide financière directe aux parents dont l'enfant est atteint d'une pathologie oncologique, afin de réduire le poids économique et leur permettre de se concentrer sur l'essentiel : être présent pour leur enfant.</p>
+  </div>
+</div>
+
+<hr style="border-color:var(--border);margin:3rem 0;">
+
+<div id="reflexologie" class="row align-items-center gy-4 mb-5 fade-up">
+  <div class="col-lg-8">
+    <span class="section-label">Projet 5</span>
+    <h3>Réflexologie plantaire</h3>
+    <div class="divider"></div>
+    <p>La réflexologie plantaire est une technique de bien-être qui consiste à stimuler des zones réflexes situées sur les pieds, correspondant à des organes ou parties du corps. Pour les patients en cours de traitement, elle contribue à réduire le stress, améliorer la circulation et atténuer certains effets secondaires des chimiothérapies.</p>
+    <p class="mt-2">Ces séances sont proposées gratuitement aux patients d'Oncolovie, assurées par des praticiens certifiés et expérimentés en milieu oncologique.</p>
+  </div>
+  <div class="col-lg-4">
+    <div class="row g-2 text-center">
+      <div class="col-6"><div class="activite-item p-3" style="background:var(--bg2);border-radius:12px;"><img src="images/icon-balanced.png" alt="Équilibre" style="width:55px;"><h4 class="mt-2">Équilibre</h4></div></div>
+      <div class="col-6"><div class="activite-item p-3" style="background:var(--bg2);border-radius:12px;"><img src="images/icon-dietetic.png" alt="Bien-être" style="width:55px;"><h4 class="mt-2">Bien-être</h4></div></div>
+    </div>
+  </div>
+</div>
+
+<hr style="border-color:var(--border);margin:3rem 0;">
+
+<div id="bien-etre-had" class="row align-items-center gy-4 fade-up">
+  <div class="col-lg-4 order-lg-1"><div class="don-img-section"><img src="images/cta-don.jpg" alt="Bien-être à domicile" style="height:260px;"><div class="don-img-content"><h3>À domicile</h3><p>Soin et accompagnement</p></div></div></div>
+  <div class="col-lg-8 order-lg-2">
+    <span class="section-label">Projet 6</span>
+    <h3>Bien-être et hospitalisation à domicile</h3>
+    <div class="divider"></div>
+    <p>Pour les patients en hospitalisation à domicile (HAD), le maintien d'un suivi de bien-être est essentiel. Oncolovie intervient pour proposer des soins de confort, du soutien psychologique et des activités adaptées directement au domicile du patient.</p>
+    <p class="mt-2">Cette initiative reconnaît que la qualité de vie à domicile est tout aussi importante que le soin médicalisé, et que chaque patient mérite un accompagnement personnalisé, chez lui.</p>
+  </div>
+</div>
+```
+
   </div>
 </section>
 
-<!-- CTA -->
+<section class="section-md bg-warm">
+  <div class="container">
+    <div class="row g-4 justify-content-center text-center">
+      <div class="col-6 col-md-3 fade-up"><div class="activite-item"><img src="images/icon-dietetic.png" alt="Diététique"><h4>Diététique</h4></div></div>
+      <div class="col-6 col-md-3 fade-up d1"><div class="activite-item"><img src="images/icon-aesthetic.png" alt="Esthétique"><h4>Esthétique</h4></div></div>
+      <div class="col-6 col-md-3 fade-up d2"><div class="activite-item"><img src="images/icon-balanced.png" alt="Équilibre"><h4>Équilibre</h4></div></div>
+      <div class="col-6 col-md-3 fade-up d3"><div class="activite-item"><img src="images/icon-expression.png" alt="Expression"><h4>Expression</h4></div></div>
+    </div>
+  </div>
+</section>
 
 <section class="section-md">
   <div class="container">
-    <div class="don-cta">
-      <h2>Soutenez l'ESPACE+</h2>
-      <p>En faisant un don, vous financez directement l'accueil, les activités et l'accompagnement des patients de l'ESPACE+.</p>
+    <div class="don-banner">
+      <h2>Soutenez nos projets</h2>
+      <p>Chaque euro donné finance directement l'un de ces projets. Merci de votre générosité.</p>
       <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
-        <a href="contact.html#don" class="btn-accent-custom">❤ Faire un don</a>
-        <a href="contact.html" class="btn-outline-custom" style="color:#fff;border-color:rgba(255,255,255,.4);">Nous contacter</a>
+        <a href="soutien.html#don" class="btn-accent-custom">❤ Faire un don</a>
+        <a href="soutien.html" class="btn-white-outline" style="border-color:rgba(255,255,255,.4)">Toutes les formules</a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
 
 <footer>
   <div class="container">
     <div class="row gy-5">
       <div class="col-lg-4">
-        <div class="footer-logo">Oncolovie</div>
-        <p style="font-size:.82rem;color:rgba(255,255,255,.35);margin-top:.3rem;">Fondation privée · Chaudfontaine</p>
-        <p style="font-size:.88rem;margin-top:1rem;">Soutien et accompagnement des patients oncologiques et de leur entourage en région liégeoise.</p>
+        <div class="footer-brand">Oncolovie</div>
+        <div class="footer-sub">Fondation privée · Chaudfontaine</div>
+        <p class="footer-text mt-3">Approche holistique pour lutter contre les pathologies oncologiques en plaçant le patient au cœur de son processus de guérison.</p>
       </div>
       <div class="col-6 col-lg-2">
         <h5>Navigation</h5>
@@ -168,27 +187,32 @@
           <li><a href="index.html">Accueil</a></li>
           <li><a href="la-fondation.html">La Fondation</a></li>
           <li><a href="projets.html">Nos projets</a></li>
-          <li><a href="actualites.html">Actualités</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="actualites.html">News</a></li>
+          <li><a href="historique.html">Historique</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2">
-        <h5>Agir</h5>
+        <h5>Soutien</h5>
         <ul>
-          <li><a href="contact.html#don">Faire un don</a></li>
-          <li><a href="contact.html#benevole">Devenir bénévole</a></li>
-          <li><a href="contact.html">Nous contacter</a></li>
+          <li><a href="soutien.html#don">Faites un don</a></li>
+          <li><a href="soutien.html#donation">Une donation</a></li>
+          <li><a href="soutien.html#legs">Legs en duo</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="col-lg-4">
         <h5>Contact</h5>
-        <p style="font-size:.88rem;">Chaudfontaine, Région liégeoise<br>Belgique</p>
-        <p style="font-size:.88rem;margin-top:.75rem;"><a href="mailto:info@oncolovie.be" style="color:rgba(255,255,255,.5);">info@oncolovie.be</a></p>
+        <p class="footer-text">Clos Perly 14b – 4052 Chaudfontaine<br>
+          <a href="tel:043554213" class="footer-link">04 355 42 13</a><br>
+          <a href="mailto:info@oncolovie.be" class="footer-link">info@oncolovie.be</a>
+        </p>
+        <p class="footer-text mt-2" style="font-size:.76rem;color:rgba(255,255,255,.25);">N° d'entreprise : 0762.941.820</p>
       </div>
     </div>
     <div class="footer-bottom d-flex justify-content-between flex-wrap gap-2">
       <span>© 2026 Fondation Oncolovie. Tous droits réservés.</span>
-      <span>Site réalisé par <a href="#" style="color:rgba(255,255,255,.4);">Essam</a></span>
+      <span><a href="mentions-legales.html" style="color:rgba(255,255,255,.28);">Mentions légales</a> · Site par <a href="https://venomenale.github.io/DAFA/" style="color:rgba(255,255,255,.28);">Essam</a></span>
     </div>
   </div>
 </footer>
@@ -198,10 +222,8 @@
 <script>
 const nav = document.getElementById('mainNav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.15 });
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.12});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 </script>
 
 </body>
