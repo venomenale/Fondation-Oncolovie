@@ -75,8 +75,10 @@ img { max-width: 100%; }
 .nav-wrap { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; padding: .9rem 0; transition: .35s; }
 .nav-wrap.solid { background: rgba(252, 253, 255, 0.96); backdrop-filter: blur(16px); box-shadow: 0 2px 20px rgba(0,0,0,.06); padding: .55rem 0; }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-.nav-brand { font-family: var(--font-titre); font-size: 1.5rem; font-weight: 700; color: #fff; line-height: 1; transition: .25s; text-decoration: none !important; }
+.nav-brand { font-family: var(--font-titre); font-size: 1.5rem; font-weight: 700; color: #fff; line-height: 1; transition: .25s; text-decoration: none !important; display: flex; align-items: center; }
 .nav-brand span { display: block; font-family: var(--font-corps); font-size: .62rem; font-weight: 400; letter-spacing: .16em; text-transform: uppercase; opacity: .7; margin-top: .1rem; }
+.nav-logo { height: 38px; width: auto; display: block; filter: drop-shadow(0 1px 8px rgba(0,0,0,.45)); transition: .35s; }
+.nav-wrap.solid .nav-logo { filter: none; }
 .nav-wrap.solid .nav-brand { color: var(--rose-d); }
 .nav-links { display: flex; align-items: center; gap: .2rem; list-style: none; }
 .nav-links li a { color: rgba(255,255,255,.85); font-size: .83rem; font-weight: 500; padding: .4rem .75rem; border-radius: 8px; transition: .2s; display: block; text-decoration: none !important; }
@@ -153,7 +155,8 @@ img { max-width: 100%; }
 /* ---- ACTIVITÉS ---- */
 .activite { text-align: center; padding: 1.5rem 1rem; background: var(--white); border-radius: var(--radius-lg); border: 1px solid var(--border); transition: .3s; }
 .activite:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-.activite img { width: 64px; height: 64px; object-fit: contain; margin-bottom: .9rem; }
+.activite img, .activite svg { width: 64px; height: 64px; object-fit: contain; margin-bottom: .9rem; display: block; margin-left: auto; margin-right: auto; }
+.activite:hover svg { transform: scale(1.08); transition: .3s; }
 .activite h4 { font-family: var(--font-corps); font-size: .95rem; font-weight: 600; color: var(--rose-d); }
 
 /* ---- NEWS ---- */
