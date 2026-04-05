@@ -32,7 +32,7 @@
       <a href="projets.html#bien-etre-had">Bien-être & HAD</a>
     </div></li>
         <li><a href="agenda.html">Agenda</a></li>
-        <li><a href="actualites.html">News</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
         <li><a href="historique.html">Historique</a></li>
         <li class="has-drop"><a href="soutien.html">Soutien ▾</a><div class="drop">
       <a href="soutien.html#don">Faites un don</a>
@@ -121,7 +121,7 @@
           <li><a href="la-fondation.html">La Fondation</a></li>
           <li><a href="projets.html">Nos projets</a></li>
           <li><a href="agenda.html">Agenda</a></li>
-          <li><a href="actualites.html">News</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
           <li><a href="historique.html">Historique</a></li>
         </ul>
       </div>
@@ -153,8 +153,44 @@ const navEl = document.getElementById('nav');
 if(navEl) window.addEventListener('scroll', function(){ navEl.classList.toggle('solid', window.scrollY > 50); });
 
 function toggleNav(){
-  document.getElementById('navlinks').classList.toggle('open');
+  var nl = document.getElementById('navlinks');
+  var hbg = document.getElementById('hbg');
+  nl.classList.toggle('open');
+  hbg.classList.toggle('is-open');
+  if(!nl.classList.contains('open')){
+    document.querySelectorAll('.has-drop').forEach(function(el){ el.classList.remove('open-drop'); });
+  }
 }
+
+document.querySelectorAll('.has-drop > a').forEach(function(a){
+  a.addEventListener('click', function(e){
+    if(window.innerWidth < 992){
+      e.preventDefault();
+      var p = this.closest('.has-drop');
+      var was = p.classList.contains('open-drop');
+      document.querySelectorAll('.has-drop').forEach(function(el){ el.classList.remove('open-drop'); });
+      if(!was) p.classList.add('open-drop');
+    }
+  });
+});
+
+document.querySelectorAll('.nav-links li:not(.has-drop) a').forEach(function(a){
+  a.addEventListener('click', function(){
+    if(window.innerWidth < 992){
+      document.getElementById('navlinks').classList.remove('open');
+      document.getElementById('hbg').classList.remove('is-open');
+    }
+  });
+});
+
+document.addEventListener('click', function(e){
+  var nav = document.getElementById('nav');
+  if(nav && !nav.contains(e.target)){
+    document.getElementById('navlinks').classList.remove('open');
+    document.getElementById('hbg').classList.remove('is-open');
+    document.querySelectorAll('.has-drop').forEach(function(el){ el.classList.remove('open-drop'); });
+  }
+});
 
 const obs = new IntersectionObserver(function(entries){
   entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); });

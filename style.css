@@ -94,14 +94,29 @@ img { max-width: 100%; }
 .hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: .3s; }
 .nav-wrap.solid .hamburger span { background: var(--rose-d); }
 @media (max-width: 991px) {
-  .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #fff; padding: 1rem; gap: 0; box-shadow: 0 8px 30px rgba(0,0,0,.1); }
+  .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10, 23, 32, 0.97); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 1rem 1rem 1.5rem; gap: 0; box-shadow: 0 12px 40px rgba(0,0,0,.35); border-top: 1px solid rgba(255,255,255,.07); }
   .nav-links.open { display: flex; }
-  .nav-links li a { color: var(--muted) !important; padding: .65rem 1rem; }
-  .drop { position: static; box-shadow: none; border: none; padding: 0 0 0 1rem; background: transparent; }
+  .nav-links li a { color: rgba(255,255,255,.75) !important; padding: .7rem 1rem; border-radius: 8px; }
+  .nav-links li a:hover { color: #fff !important; background: rgba(255,255,255,.08) !important; }
+  .drop { position: static; box-shadow: none; border: none; padding: 0 0 .5rem 1rem; background: transparent; }
+  .drop a { color: rgba(255,255,255,.45) !important; }
+  .drop a:hover { color: rgba(255,255,255,.85) !important; background: rgba(255,255,255,.06) !important; }
   .has-drop .drop { display: none; }
   .has-drop.open-drop .drop { display: block; }
   .hamburger { display: flex; }
 }
+
+/* Hamburger → X animation */
+.hamburger span { transition: transform .3s, opacity .3s; }
+.hamburger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Filter buttons (fond clair) */
+.filter-btn { border-color: var(--border) !important; color: var(--muted) !important; background: var(--white) !important; }
+.filter-btn:hover { border-color: var(--rose) !important; color: var(--rose) !important; background: var(--cream2) !important; }
+.filter-btn.on { border-color: var(--gold) !important; background: var(--gold) !important; color: #fff !important; }
+.filter-btn.on:hover { background: var(--gold-d) !important; border-color: var(--gold-d) !important; }
 
 /* ---- HERO ---- */
 .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; background: linear-gradient(150deg, #0A1B24 0%, var(--rose-d) 40%, #051015 100%); }
