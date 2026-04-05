@@ -5,7 +5,7 @@
     "titre": "16 avril 2026 : Une soirée exceptionnelle aux couleurs de Starmania",
     "extrait": "La Fondation Oncolovie vous invite à une soirée musicale inoubliable placée sous le signe de Starmania, l'opéra-rock mythique de Michel Berger et Luc Plamondon.",
     "tag": "Événement",
-    "image": "images/vignette-billeterie-ok--450x255.png",
+    "image": "images/Starmania.webp",
     "lien": "actualites.html"
   },
   {
@@ -23,7 +23,7 @@
     "titre": "29 mai 2026 : 4ème édition du tournoi de golf Oncolovie",
     "extrait": "Pour sa quatrième année consécutive, la fondation organise son tournoi de golf. Les bénéfices seront intégralement consacrés à la poursuite de nos projets.",
     "tag": "Événement",
-    "image": "images/Oncolovie_golf-40-450x255.jpg",
+    "image": "images/Golf4.webp",
     "lien": "actualites.html"
   },
   {
@@ -32,7 +32,7 @@
     "titre": "Deux soirées solidaires au profit d'Oncolovie : retour sur une mobilisation généreuse",
     "extrait": "La Fondation privée Oncolovie a eu la chance de pouvoir compter sur l'engagement et la générosité d'artistes et de nombreux supporters.",
     "tag": "Actualité",
-    "image": "images/image00009-scaled-e1771251031908-450x255.jpeg",
+    "image": "images/Solidaire2.webp",
     "lien": "actualites.html"
   },
   {
@@ -41,7 +41,7 @@
     "titre": "Tournoi de golf Oncolovie 2025 : une belle édition grâce à vous !",
     "extrait": "Le vendredi 23 mai dernier s'est tenue la 3ème édition de notre tournoi de golf au profit de la Fondation. Un grand merci à tous les participants !",
     "tag": "Actualité",
-    "image": "images/Oncolovie_golf_2-98-min-450x255.jpg",
+    "image": "images/Golf2.webp",
     "lien": "actualites.html"
   }
 ]
