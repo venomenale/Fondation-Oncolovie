@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Article — Fondation Oncolovie</title>
+  <title>Historique — Fondation Oncolovie</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Article — Fondation Oncolovie">
+  <meta name="description" content="Événement passé — Fondation Oncolovie">
   <style>
     .article-img { width: 100%; max-height: 420px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: 2rem; display: block; }
-    .article-img-placeholder { width: 100%; height: 320px; background: linear-gradient(135deg, var(--rose), var(--rose-l)); border-radius: var(--radius-lg); margin-bottom: 2rem; }
+    .article-img-placeholder { width: 100%; height: 280px; background: linear-gradient(135deg, var(--rose), var(--rose-l)); border-radius: var(--radius-lg); margin-bottom: 2rem; }
     .article-body h3 { color: var(--rose-d); margin: 1.8rem 0 .7rem; font-size: 1.4rem; }
     .article-body p { color: var(--muted); line-height: 1.85; margin-bottom: 1rem; }
     .article-body ul { color: var(--muted); padding-left: 1.4rem; margin-bottom: 1rem; }
@@ -22,17 +22,14 @@
     .article-meta { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
     .article-tag { display: inline-flex; align-items: center; gap: .4rem; background: var(--rose); color: #fff; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .3rem .85rem; border-radius: 50px; }
     .article-date { font-size: .8rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--gold); }
-    .article-share { display: flex; align-items: center; gap: .6rem; font-size: .8rem; color: var(--muted); margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
-    .share-btn { display: inline-flex; align-items: center; gap: .4rem; padding: .45rem 1rem; border-radius: 50px; border: 1.5px solid var(--border); color: var(--muted); font-size: .78rem; font-weight: 500; cursor: pointer; background: var(--white); transition: .2s; text-decoration: none; }
-    .share-btn:hover { border-color: var(--rose); color: var(--rose); background: var(--cream2); }
+    .past-badge { display: inline-flex; align-items: center; gap: .35rem; background: var(--cream2); color: var(--muted); font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: .3rem .85rem; border-radius: 50px; border: 1px solid var(--border); }
     .related-card { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); transition: .3s; display: flex; flex-direction: column; height: 100%; }
     .related-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-    .related-thumb { height: 160px; overflow: hidden; position: relative; background: var(--cream2); }
+    .related-thumb { height: 160px; overflow: hidden; background: var(--cream2); }
     .related-thumb img { width: 100%; height: 100%; object-fit: cover; transition: .5s; }
     .related-card:hover .related-thumb img { transform: scale(1.05); }
     .related-body { padding: 1.1rem; flex: 1; display: flex; flex-direction: column; }
     .related-body h5 { color: var(--rose-d); font-size: .95rem; font-family: var(--font-corps); font-weight: 600; margin-bottom: .4rem; line-height: 1.35; }
-    .related-body .news-date { margin-bottom: 0; }
     #article-loading { text-align: center; padding: 5rem 0; }
     #article-error { text-align: center; padding: 5rem 0; display: none; }
     .article-wrapper { max-width: 720px; margin: 0 auto; }
@@ -59,7 +56,6 @@
         </div></li>
         <li><a href="agenda.html">Agenda</a></li>
         <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="historique.html">Historique</a></li>
         <li class="has-drop"><a href="soutien.html">Soutien ▾</a><div class="drop">
           <a href="soutien.html#don">Faites un don</a>
           <a href="soutien.html#donation">Effectuez une donation</a>
@@ -74,10 +70,10 @@
 
 <section class="page-hero" id="article-page-hero">
   <div class="container" style="position:relative;z-index:2;">
-    <div class="bc" id="article-bc">
+    <div class="bc">
       <a href="index.html">Accueil</a><span>›</span>
-      <a href="actualites.html">Actualités</a><span>›</span>
-      <span class="cur" id="bc-title">Article</span>
+      <a href="actualites.html#passes">Événements passés</a><span>›</span>
+      <span class="cur" id="bc-title">Événement</span>
     </div>
     <h1 id="article-page-title" style="max-width:700px;">Chargement…</h1>
   </div>
@@ -86,14 +82,14 @@
 <section class="sec">
   <div class="container">
     <div id="article-loading">
-      <div class="skeleton" style="height:420px;margin-bottom:2rem;"></div>
-      <div class="skeleton" style="height:32px;width:60%;margin-bottom:1rem;"></div>
-      <div class="skeleton" style="height:18px;margin-bottom:.6rem;"></div>
-      <div class="skeleton" style="height:18px;margin-bottom:.6rem;"></div>
-      <div class="skeleton" style="height:18px;width:80%;"></div>
+      <div class="skeleton" style="height:380px;margin-bottom:2rem;border-radius:var(--radius-lg);"></div>
+      <div class="skeleton" style="height:28px;width:55%;margin-bottom:1rem;"></div>
+      <div class="skeleton" style="height:16px;margin-bottom:.5rem;"></div>
+      <div class="skeleton" style="height:16px;margin-bottom:.5rem;"></div>
+      <div class="skeleton" style="height:16px;width:75%;"></div>
     </div>
-    <div id="article-error">
-      <p style="color:var(--muted);">Article introuvable. <a href="actualites.html">Retour aux actualités</a></p>
+    <div id="article-error" style="display:none;">
+      <p style="color:var(--muted);">Événement introuvable. <a href="historique.html">Retour à l'historique</a></p>
     </div>
     <div id="article-content" style="display:none;">
       <div class="article-wrapper">
@@ -101,22 +97,17 @@
         <div class="article-meta">
           <span class="article-tag" id="art-tag"></span>
           <span class="article-date" id="art-date"></span>
+          <span class="past-badge">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Événement passé
+          </span>
         </div>
         <h2 id="art-title" class="mb-3"></h2>
         <div class="article-body" id="art-body"></div>
-        <div class="article-share">
-          <span>Partager :</span>
-          <a class="share-btn" id="share-fb" href="#" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            Facebook
-          </a>
-          <a class="share-btn" id="share-wa" href="#" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp
-          </a>
-          <a class="share-btn" id="share-copy" href="#" onclick="copyLink(event)">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-            Copier le lien
+        <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+          <a href="actualites.html#passes" class="btn btn-outline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7 16l-4-4m0 0l4-4m-4 4h18"/></svg>
+            Retour à l'historique
           </a>
         </div>
       </div>
@@ -124,14 +115,13 @@
   </div>
 </section>
 
-<!-- Articles liés -->
 <section class="sec bg-warm" id="related-section" style="display:none;">
   <div class="container">
-    <div class="tag">Continuer à lire</div>
-    <h2 class="mb-4">Autres actualités</h2>
+    <div class="tag">Dans le même esprit</div>
+    <h2 class="mb-4">Autres événements</h2>
     <div class="row g-3" id="related-grid"></div>
     <div class="text-center mt-4">
-      <a href="actualites.html" class="btn btn-outline">Toutes les actualités</a>
+      <a href="actualites.html#passes" class="btn btn-outline">Voir tous les événements passés</a>
     </div>
   </div>
 </section>
@@ -224,22 +214,8 @@ document.addEventListener('click', function(e){
   }
 });
 
-const obs = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); });
-}, {threshold: 0.1});
-document.querySelectorAll('.fu').forEach(function(el){ obs.observe(el); });
-
-/* ---- ARTICLE LOGIC ---- */
+/* ---- ARTICLE ---- */
 function fmtDate(s){ return new Date(s).toLocaleDateString('fr-BE',{day:'numeric',month:'long',year:'numeric'}); }
-
-function copyLink(e){
-  e.preventDefault();
-  navigator.clipboard.writeText(window.location.href).then(function(){
-    var btn = document.getElementById('share-copy');
-    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Copié !';
-    setTimeout(function(){ btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg> Copier le lien'; }, 2000);
-  });
-}
 
 function buildRelatedCard(item){
   var thumb = item.image
@@ -251,7 +227,7 @@ function buildRelatedCard(item){
 var params = new URLSearchParams(window.location.search);
 var artId = parseInt(params.get('id'), 10);
 
-fetch('./news.json')
+fetch('./historique.json')
   .then(function(r){ return r.json(); })
   .then(function(data){
     var article = data.find(function(n){ return n.id === artId; });
@@ -262,18 +238,10 @@ fetch('./news.json')
       return;
     }
 
-    /* Update page title & breadcrumb */
     document.title = article.titre + ' — Fondation Oncolovie';
     document.getElementById('article-page-title').textContent = article.titre;
     document.getElementById('bc-title').textContent = article.tag;
 
-    /* Share links */
-    var url = encodeURIComponent(window.location.href);
-    var title = encodeURIComponent(article.titre);
-    document.getElementById('share-fb').href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
-    document.getElementById('share-wa').href = 'https://wa.me/?text=' + title + '%20' + url;
-
-    /* Image */
     var imgWrap = document.getElementById('article-img-wrap');
     if(article.image){
       imgWrap.innerHTML = '<img src="' + article.image + '" alt="' + article.titre + '" class="article-img" onerror="this.parentNode.innerHTML=\'<div class=article-img-placeholder></div>\'">';
@@ -281,7 +249,6 @@ fetch('./news.json')
       imgWrap.innerHTML = '<div class="article-img-placeholder"></div>';
     }
 
-    /* Meta */
     document.getElementById('art-tag').textContent = article.tag;
     document.getElementById('art-date').textContent = fmtDate(article.date);
     document.getElementById('art-title').textContent = article.titre;
@@ -289,7 +256,6 @@ fetch('./news.json')
 
     document.getElementById('article-content').style.display = 'block';
 
-    /* Related articles (same tag, excluding current) */
     var related = data.filter(function(n){ return n.id !== artId; }).slice(0, 3);
     if(related.length){
       document.getElementById('related-grid').innerHTML = related.map(buildRelatedCard).join('');
