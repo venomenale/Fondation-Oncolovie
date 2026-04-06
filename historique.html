@@ -52,142 +52,27 @@
     <p class="lead mt-2">Retour sur les événements et actions de la Fondation Oncolovie depuis ses débuts.</p>
   </div>
 </section>
+<section class="sec-sm bg-warm">
+  <div class="container">
+    <div class="d-flex gap-2 flex-wrap align-items-center">
+      <span style="font-size:.8rem;font-weight:500;color:var(--muted);">Filtrer :</span>
+      <button class="amt filter-btn on" onclick="filter(this,'Tout')">Tout</button>
+      <button class="amt filter-btn" onclick="filter(this,'Golf')">Golf</button>
+      <button class="amt filter-btn" onclick="filter(this,'Spectacle')">Spectacles</button>
+      <button class="amt filter-btn" onclick="filter(this,'Moto')">Moto</button>
+      <button class="amt filter-btn" onclick="filter(this,'Solidarité')">Solidarité</button>
+      <button class="amt filter-btn" onclick="filter(this,'Exposition')">Exposition</button>
+    </div>
+  </div>
+</section>
 <section class="sec">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="fu">
-          <div class="tag">Nos événements passés</div>
-          <h2>L'histoire d'Oncolovie en événements</h2>
-          <div class="divider"></div>
-          <p class="lead">Chaque événement organisé a permis de financer directement nos projets au profit des patients oncologiques de la région liégeoise.</p>
-        </div>
-        <div class="mt-5">
-          
-    <div class="row align-items-center gy-3 mb-4 fu">
-      <div class="col-lg-3">
-        <img src="images/Affiche-Facebook-3A-etat-brut-Zidani-450x255.jpg" alt="Les 3 amies montent sur scène au profit de la Fondation Oncolovie" style="width:100%;border-radius:12px;object-fit:cover;height:140px;" onerror="this.style.display='none'">
-      </div>
-      <div class="col-lg-9">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;">27/11/2025</div>
-        <h4 style="color:var(--rose-d);margin-bottom:.4rem;">Les 3 amies montent sur scène au profit de la Fondation Oncolovie</h4>
-        <p style="font-size:.88rem;margin:0;">Manon Lepomme, Isabelle Hauben et Isabelle Innocente se réunissent sur scène pour une soirée exceptionnelle au Casino de Chaudfontaine.</p>
-      </div>
+    <div class="row g-3" id="hist-grid">
+      <div class="col-md-4"><div class="skeleton"></div></div>
+      <div class="col-md-4"><div class="skeleton"></div></div>
+      <div class="col-md-4"><div class="skeleton"></div></div>
     </div>
-    <hr style="border-color:var(--border);margin:.5rem 0 1.5rem;">
-    <div class="row align-items-center gy-3 mb-4 fu">
-      <div class="col-lg-3">
-        <img src="images/Vignette-billetterie-450x255.png" alt="Soirée musicale au profit de la Fondation Oncolovie" style="width:100%;border-radius:12px;object-fit:cover;height:140px;" onerror="this.style.display='none'">
-      </div>
-      <div class="col-lg-9">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;">04/10/2025</div>
-        <h4 style="color:var(--rose-d);margin-bottom:.4rem;">Soirée musicale au profit de la Fondation Oncolovie</h4>
-        <p style="font-size:.88rem;margin:0;">La Fondation Oncolovie s'associe à Pims Prod pour un événement caritatif exceptionnel, placé sous le signe de l'émotion.</p>
-      </div>
-    </div>
-    <hr style="border-color:var(--border);margin:.5rem 0 1.5rem;">
-    <div class="row align-items-center gy-3 mb-4 fu">
-      <div class="col-lg-3">
-        <img src="images/oncolovie-vignette-450x255.jpg" alt="La vie est un art – Exposition" style="width:100%;border-radius:12px;object-fit:cover;height:140px;" onerror="this.style.display='none'">
-      </div>
-      <div class="col-lg-9">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;">10/10/2024</div>
-        <h4 style="color:var(--rose-d);margin-bottom:.4rem;">La vie est un art – Exposition</h4>
-        <p style="font-size:.88rem;margin:0;">Venez admirer ou acquérir de belles œuvres… au profit d'une bonne cause ! La Fondation Oncolovie organise une exposition d'art.</p>
-      </div>
-    </div>
-    <hr style="border-color:var(--border);margin:.5rem 0 1.5rem;">
-    <div class="row align-items-center gy-3 mb-4 fu">
-      <div class="col-lg-3">
-        <img src="images/golf-3-450x255.jpg" alt="3ème édition tournoi de golf Oncolovie" style="width:100%;border-radius:12px;object-fit:cover;height:140px;" onerror="this.style.display='none'">
-      </div>
-      <div class="col-lg-9">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;">23/05/2025</div>
-        <h4 style="color:var(--rose-d);margin-bottom:.4rem;">3ème édition tournoi de golf Oncolovie</h4>
-        <p style="font-size:.88rem;margin:0;">Pour sa troisième année consécutive, la fondation organise son tournoi de golf. Les bénéfices poursuivent nos projets.</p>
-      </div>
-    </div>
-    <hr style="border-color:var(--border);margin:.5rem 0 1.5rem;">
-    <div class="row align-items-center gy-3 mb-4 fu">
-      <div class="col-lg-3">
-        <img src="images/426205179_914230173826079_6051115850745401876_n-450x255.jpg" alt="Opéra – Falstaff (Verdi)" style="width:100%;border-radius:12px;object-fit:cover;height:140px;" onerror="this.style.display='none'">
-      </div>
-      <div class="col-lg-9">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;">26/02/2024</div>
-        <h4 style="color:var(--rose-d);margin-bottom:.4rem;">Opéra – Falstaff (Verdi)</h4>
-        <p style="font-size:.88rem;margin:0;">Participez à l'avant-première de Falstaff de Verdi. Une soirée culturelle au profit de la Fondation.</p>
-      </div>
-    </div>
-    <hr style="border-color:var(--border);margin:.5rem 0 1.5rem;">
-    <div class="row align-items-center gy-3 mb-4 fu">
-      <div class="col-lg-3">
-        <img src="images/tracteur-1-450x255.jpg" alt="Balade de vieux tracteurs" style="width:100%;border-radius:12px;object-fit:cover;height:140px;" onerror="this.style.display='none'">
-      </div>
-      <div class="col-lg-9">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;">16/04/2023</div>
-        <h4 style="color:var(--rose-d);margin-bottom:.4rem;">Balade de vieux tracteurs</h4>
-        <p style="font-size:.88rem;margin:0;">Les Vis Tchoufs d'Aywaille organisent cette deuxième édition, au profit de l'Espace+.</p>
-      </div>
-    </div>
-    <hr style="border-color:var(--border);margin:.5rem 0 1.5rem;">
-    <div class="row align-items-center gy-3 mb-4 fu">
-      <div class="col-lg-3">
-        <img src="images/Balade-moto-Oncolovie-1-450x255.jpg" alt="6ème Balade Moto" style="width:100%;border-radius:12px;object-fit:cover;height:140px;" onerror="this.style.display='none'">
-      </div>
-      <div class="col-lg-9">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;">28/05/2023</div>
-        <h4 style="color:var(--rose-d);margin-bottom:.4rem;">6ème Balade Moto</h4>
-        <p style="font-size:.88rem;margin:0;">Une 6ème balade en moto organisée au profit de l'Espace+. Souper inclus.</p>
-      </div>
-    </div>
-    <hr style="border-color:var(--border);margin:.5rem 0 1.5rem;">
-    <div class="row align-items-center gy-3 mb-4 fu">
-      <div class="col-lg-3">
-        <img src="images/Balle-golf-Oncolovie-450x255.jpg" alt="2ème édition Tournoi de golf Oncolovie" style="width:100%;border-radius:12px;object-fit:cover;height:140px;" onerror="this.style.display='none'">
-      </div>
-      <div class="col-lg-9">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;">25/09/2023</div>
-        <h4 style="color:var(--rose-d);margin-bottom:.4rem;">2ème édition Tournoi de golf Oncolovie</h4>
-        <p style="font-size:.88rem;margin:0;">Après le succès de l'édition 2022, la fondation organise la deuxième édition de son tournoi de golf.</p>
-      </div>
-    </div>
-    <hr style="border-color:var(--border);margin:.5rem 0 1.5rem;">
-    <div class="row align-items-center gy-3 mb-4 fu">
-      <div class="col-lg-3">
-        <img src="images/three-men-wearing-leather-jackets-riding-cafe-race-2022-03-04-02-34-25-utc-450x255.jpg" alt="5ème Balade Moto" style="width:100%;border-radius:12px;object-fit:cover;height:140px;" onerror="this.style.display='none'">
-      </div>
-      <div class="col-lg-9">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;">29/05/2022</div>
-        <h4 style="color:var(--rose-d);margin-bottom:.4rem;">5ème Balade Moto</h4>
-        <p style="font-size:.88rem;margin:0;">Une 5ème balade en moto organisée au profit de l'Espace+.</p>
-      </div>
-    </div>
-    <hr style="border-color:var(--border);margin:.5rem 0 1.5rem;">
-    <div class="row align-items-center gy-3 mb-4 fu">
-      <div class="col-lg-3">
-        <img src="images/bouquet-of-flowers-lily-of-the-valley-on-turquoise-2021-12-14-00-34-00-utc-450x255.jpg" alt="Vente de Muguet" style="width:100%;border-radius:12px;object-fit:cover;height:140px;" onerror="this.style.display='none'">
-      </div>
-      <div class="col-lg-9">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;">29/04/2022</div>
-        <h4 style="color:var(--rose-d);margin-bottom:.4rem;">Vente de Muguet</h4>
-        <p style="font-size:.88rem;margin:0;">Vente de bouquets de Muguet accompagnés d'une fleur au prix de 5€, au profit de la Fondation.</p>
-      </div>
-    </div>
-    <hr style="border-color:var(--border);margin:.5rem 0 1.5rem;">
-    <div class="row align-items-center gy-3 mb-4 fu">
-      <div class="col-lg-3">
-        <img src="images/golf-450x255.webp" alt="1er Tournoi de golf Oncolovie" style="width:100%;border-radius:12px;object-fit:cover;height:140px;" onerror="this.style.display='none'">
-      </div>
-      <div class="col-lg-9">
-        <div style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;">16/06/2022</div>
-        <h4 style="color:var(--rose-d);margin-bottom:.4rem;">1er Tournoi de golf Oncolovie</h4>
-        <p style="font-size:.88rem;margin:0;">La première édition du tournoi de golf Oncolovie, au profit du bien-être des personnes en traitement oncologique.</p>
-      </div>
-    </div>
-    <hr style="border-color:var(--border);margin:.5rem 0 1.5rem;">
-        </div>
-      </div>
-    </div>
+    <div id="no-r" style="display:none;" class="text-center py-5"><p>Aucun événement dans cette catégorie.</p></div>
   </div>
 </section>
 <section class="sec-sm bg-warm">
@@ -291,14 +176,34 @@ const obs = new IntersectionObserver(function(entries){
 }, {threshold: 0.1});
 document.querySelectorAll('.fu').forEach(function(el){ obs.observe(el); });
 
-document.querySelectorAll('.amt').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    document.querySelectorAll('.amt').forEach(function(b){ b.classList.remove('on'); });
-    this.classList.add('on');
-    var inp = document.getElementById('don-input');
-    if(inp && this.dataset.val) inp.value = this.dataset.val;
+/* ---- HISTORIQUE JSON ---- */
+var allHist = [];
+function fmtDate(s){ return new Date(s).toLocaleDateString('fr-BE',{day:'numeric',month:'long',year:'numeric'}); }
+function buildCard(item){
+  var img = item.image
+    ? '<div class="news-thumb"><img src="' + item.image + '" alt="' + item.titre + '" loading="lazy"><span class="news-badge">' + item.tag + '</span></div>'
+    : '<div class="news-thumb" style="background:linear-gradient(135deg,var(--rose),var(--rose-l));position:relative;"><span class="news-badge" style="position:absolute;top:.8rem;left:.8rem;">' + item.tag + '</span></div>';
+  return '<div class="col-md-4" data-tag="' + item.tag + '"><div class="news-card">' + img + '<div class="news-body"><div class="news-date">' + fmtDate(item.date) + '</div><h4>' + item.titre + '</h4><p>' + item.extrait + '</p><a href="' + item.lien + '" class="more-link">Lire la suite <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div></div></div>';
+}
+function renderHist(data){
+  var g = document.getElementById('hist-grid');
+  if(!g) return;
+  if(!data.length){ g.innerHTML=''; document.getElementById('no-r').style.display='block'; return; }
+  document.getElementById('no-r').style.display='none';
+  g.innerHTML = data.map(buildCard).join('');
+}
+function filter(btn, tag){
+  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('on'); });
+  btn.classList.add('on');
+  renderHist(tag === 'Tout' ? allHist : allHist.filter(function(n){ return n.tag === tag; }));
+}
+fetch('./historique.json')
+  .then(function(r){ return r.json(); })
+  .then(function(d){ allHist = d; renderHist(d); })
+  .catch(function(){
+    var g = document.getElementById('hist-grid');
+    if(g) g.innerHTML = '<div class="col-12 text-center py-4"><p>Historique bientôt disponible.</p></div>';
   });
-});
 </script>
 </body>
 </html>
