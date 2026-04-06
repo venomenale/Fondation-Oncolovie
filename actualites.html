@@ -55,27 +55,27 @@
 <section class="sec-sm bg-warm">
   <div class="container">
 
-    <!-- Onglets principaux -->
-    <div class="tabs-bar">
-      <button class="tab-btn active" id="tab-actu" onclick="switchTab('actu')">
+    <!-- Onglets principaux (pill tabs) -->
+    <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:.75rem;">
+      <button class="tab-pill active" id="tab-actu" onclick="switchTab('actu')">
         Actualités &amp; événements
       </button>
-      <button class="tab-btn" id="tab-hist" onclick="switchTab('hist')">
+      <button class="tab-pill" id="tab-hist" onclick="switchTab('hist')">
         Événements passés
       </button>
     </div>
 
-    <!-- Filtres panel Actualités -->
-    <div id="filters-actu" class="d-flex gap-2 flex-wrap align-items-center">
-      <span style="font-size:.8rem;font-weight:500;color:var(--muted);">Filtrer :</span>
+    <!-- Sous-filtres Actualités (visibles par défaut) -->
+    <div id="filters-actu" style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;">
+      <span style="font-size:.78rem;font-weight:500;color:var(--muted);">Filtrer :</span>
       <button class="amt filter-btn on" onclick="filterActu(this,'Tout')">Tout</button>
       <button class="amt filter-btn" onclick="filterActu(this,'Événement')">Événements</button>
       <button class="amt filter-btn" onclick="filterActu(this,'Actualité')">Actualités</button>
     </div>
 
-    <!-- Filtres panel Passés -->
-    <div id="filters-hist" class="d-flex gap-2 flex-wrap align-items-center" style="display:none!important;">
-      <span style="font-size:.8rem;font-weight:500;color:var(--muted);">Filtrer :</span>
+    <!-- Sous-filtres Événements passés (cachés par défaut) -->
+    <div id="filters-hist" style="display:none;gap:.5rem;flex-wrap:wrap;align-items:center;">
+      <span style="font-size:.78rem;font-weight:500;color:var(--muted);">Filtrer :</span>
       <button class="amt filter-btn on" onclick="filterHist(this,'Tout')">Tout</button>
       <button class="amt filter-btn" onclick="filterHist(this,'Golf')">Golf</button>
       <button class="amt filter-btn" onclick="filterHist(this,'Spectacle')">Spectacles</button>
@@ -215,14 +215,20 @@ var currentTab = 'actu';
 
 function switchTab(tab){
   currentTab = tab;
+  /* Onglets */
   document.getElementById('tab-actu').classList.toggle('active', tab === 'actu');
   document.getElementById('tab-hist').classList.toggle('active', tab === 'hist');
-  document.getElementById('panel-actu').style.display = tab === 'actu' ? 'block' : 'none';
-  document.getElementById('panel-hist').style.display = tab === 'hist' ? 'block' : 'none';
-  document.getElementById('filters-actu').style.display = tab === 'actu' ? 'flex' : 'none';
-  document.getElementById('filters-hist').style.display = tab === 'hist' ? 'flex' : 'none';
-  if(tab === 'hist') window.location.hash = 'passes';
-  else history.pushState('', '', window.location.pathname);
+  /* Panels */
+  document.getElementById('panel-actu').style.display = tab === 'actu' ? '' : 'none';
+  document.getElementById('panel-hist').style.display = tab === 'hist' ? '' : 'none';
+  /* Sous-filtres — pas de classe Bootstrap, contrôle pur inline */
+  var fa = document.getElementById('filters-actu');
+  var fh = document.getElementById('filters-hist');
+  fa.style.display = tab === 'actu' ? 'flex' : 'none';
+  fh.style.display = tab === 'hist' ? 'flex' : 'none';
+  /* Hash URL */
+  if(tab === 'hist') history.replaceState(null, '', '#passes');
+  else history.replaceState(null, '', window.location.pathname);
 }
 
 /* ---- ACTUALITÉS ---- */
