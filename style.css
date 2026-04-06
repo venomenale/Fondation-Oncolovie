@@ -242,6 +242,15 @@ footer li a:hover { color: var(--rose-l); }
 .foot-bottom { border-top: 1px solid rgba(255,255,255,.07); padding-top: 1.2rem; margin-top: 2.5rem; font-size: .74rem; color: rgba(255,255,255,.25); display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
 .foot-bottom a { color: rgba(255,255,255,.25); text-decoration: none; }
 
+/* ---- ONGLETS ---- */
+.tabs-bar { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 1.5rem; }
+.tab-btn { padding: .9rem 1.6rem; font-weight: 600; font-size: .88rem; color: var(--muted); background: none; border: none; cursor: pointer; position: relative; transition: .2s; white-space: nowrap; }
+.tab-btn::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 2px; background: var(--gold); border-radius: 2px 2px 0 0; transform: scaleX(0); transition: .25s; }
+.tab-btn.active { color: var(--rose-d); }
+.tab-btn.active::after { transform: scaleX(1); }
+.tab-btn:hover { color: var(--rose); }
+@media (max-width: 575px) { .tab-btn { padding: .75rem .9rem; font-size: .82rem; } }
+
 /* ---- ANIMATIONS ---- */
 .fu { opacity: 0; transform: translateY(24px); transition: .6s; }
 .fu.in { opacity: 1; transform: translateY(0); }
