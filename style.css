@@ -186,6 +186,11 @@ img { max-width: 100%; }
 .event-info h4 { font-family: var(--font-corps); font-size: 1rem; font-weight: 600; color: var(--rose-d); margin-bottom: .2rem; }
 .event-loc { font-size: .78rem; color: var(--muted); display: flex; align-items: center; gap: .25rem; margin-top: .3rem; }
 .event-loc svg { width: 10px; height: 10px; }
+.event-prix { font-size: .75rem; font-weight: 700; color: var(--gold); margin-top: .35rem; }
+a.event-card { display: block; text-decoration: none; color: inherit; }
+a.event-card:hover .event-inner { box-shadow: var(--shadow); transform: translateY(-2px); }
+.event-inner { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: .25s; }
+.event-inner .event { border: 0; border-radius: 0; padding: .9rem; }
 
 /* ---- DON BANNER ---- */
 .don-banner { background: linear-gradient(135deg, #0A1B24 0%, var(--rose-d) 50%, var(--gold-d) 100%); border-radius: var(--radius-lg); padding: 3.5rem 2.5rem; text-align: center; position: relative; overflow: hidden; }

@@ -235,28 +235,10 @@
           <h2>Prochains événements</h2>
           <div class="divider"></div>
         </div>
-        <div class="d-flex flex-column gap-3">
-          <div class="event fu d1">
-            <div class="event-cal"><div class="d">16</div><div class="m">Avr</div></div>
-            <div class="event-info">
-              <h4>Concert Starmania — Soirée caritative</h4>
-              <div class="event-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>Casino de Chaudfontaine</div>
-            </div>
-          </div>
-          <div class="event fu d2">
-            <div class="event-cal"><div class="d">29</div><div class="m">Mai</div></div>
-            <div class="event-info">
-              <h4>4ème Tournoi de Golf Oncolovie</h4>
-              <div class="event-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>Région liégeoise</div>
-            </div>
-          </div>
-          <div class="event fu d3">
-            <div class="event-cal"><div class="d">30</div><div class="m">Mai</div></div>
-            <div class="event-info">
-              <h4>Relais pour la Vie — Seraing</h4>
-              <div class="event-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>Seraing</div>
-            </div>
-          </div>
+        <div id="events-list" style="display:flex;flex-direction:column;gap:.75rem;">
+          <div class="skeleton" style="height:175px;border-radius:var(--radius);"></div>
+          <div class="skeleton" style="height:175px;border-radius:var(--radius);"></div>
+          <div class="skeleton" style="height:175px;border-radius:var(--radius);"></div>
         </div>
         <a href="agenda.html" class="btn btn-rose mt-4 d-inline-flex">Voir l'agenda complet</a>
       </div>
@@ -267,27 +249,16 @@
 
 <section class="sec">
   <div class="container">
-    <div class="row align-items-center gy-5">
-      <div class="col-lg-5 fu">
-        <div style="position:relative;border-radius:20px;overflow:hidden;">
-          <img src="images/cta-don.webp" alt="Faire un don" style="width:100%;height:320px;object-fit:cover;display:block;">
-          <div class="img-overlay">
-            <div>
-              <h3>Votre don, leur espoir</h3>
-              <p>100% reversé aux projets</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 offset-lg-1 fu d1">
-        <div class="tag">Agir concrètement</div>
+    <div class="don-banner fu" style="background:url('images/cta-don.webp') center/cover no-repeat;">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,27,36,0.78) 0%,rgba(164,53,74,0.70) 100%);border-radius:inherit;pointer-events:none;"></div>
+      <div style="position:relative;z-index:1;">
+        <div class="tag center" style="color:var(--gold-l);">Agir concrètement</div>
         <h2>Tous vos dons sont <em>intégralement consacrés</em> à la fondation</h2>
-        <div class="divider"></div>
-        <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin:1.6rem 0 1.2rem;">
+        <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin:1.8rem 0 1.6rem;">
           <a href="soutien.html#don" class="btn btn-gold">❤ Faire un don</a>
-          <a href="soutien.html" class="btn btn-outline">Toutes les formules</a>
+          <a href="soutien.html" class="btn btn-ghost">Toutes les formules</a>
         </div>
-        <p style="color:var(--muted);font-size:.9rem;">Du fond du cœur, merci de votre générosité ! 100&nbsp;% des dons vont directement aux projets de la Fondation.</p>
+        <p class="sub">Du fond du cœur, merci de votre générosité ! 100&nbsp;% des dons vont directement aux projets de la Fondation.</p>
       </div>
     </div>
   </div>
@@ -405,6 +376,36 @@ fetch('./news.json')
     var grid = document.getElementById('news-grid');
     if(grid) grid.innerHTML = '<div class="col-12 text-center py-4"><p>Actualités bientôt disponibles.</p></div>';
   });
+</script>
+
+<script>
+var LOC_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:10px;height:10px;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>';
+var MOIS = ['Jan','Fév','Mar','Avr','Mai','Juin','Juil','Aoû','Sep','Oct','Nov','Déc'];
+function buildEventCard(item) {
+  var d = new Date(item.date);
+  var img = item.image ? '<img src="'+item.image+'" alt="'+item.titre+'" style="width:100%;height:110px;object-fit:cover;display:block;">' : '';
+  var lieu = item.lieu ? '<div class="event-loc">'+LOC_SVG+item.lieu+'</div>' : '';
+  var prix = item.prix ? '<div class="event-prix">'+item.prix+'</div>' : '';
+  return '<a href="'+item.lien+'" class="event-card">'+
+    '<div class="event-inner">'+img+
+    '<div class="event">'+
+    '<div class="event-cal"><div class="d">'+d.getDate()+'</div><div class="m">'+MOIS[d.getMonth()]+'</div></div>'+
+    '<div class="event-info"><h4>'+item.titre+'</h4>'+lieu+prix+'</div>'+
+    '</div></div></a>';
+}
+fetch('./news.json')
+  .then(function(r){ return r.json(); })
+  .then(function(data){
+    var list = document.getElementById('events-list');
+    if(!list) return;
+    var evts = data
+      .filter(function(n){ return n.tag === 'Événement'; })
+      .sort(function(a,b){ return new Date(a.date)-new Date(b.date); })
+      .slice(0,3);
+    list.innerHTML = evts.length ? evts.map(buildEventCard).join('') : '';
+    list.querySelectorAll('.event-card').forEach(function(el){ obs.observe(el); });
+  })
+  .catch(function(){});
 </script>
 </body>
 </html>
