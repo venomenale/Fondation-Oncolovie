@@ -97,7 +97,7 @@ img { max-width: 100%; }
 .nav-wrap.solid .hamburger span { background: var(--rose-d); }
 @media (max-width: 991px) {
   .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10, 23, 32, 0.97); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 1rem 1rem 1.5rem; gap: 0; box-shadow: 0 12px 40px rgba(0,0,0,.35); border-top: 1px solid rgba(255,255,255,.07); }
-  .nav-links.open { display: flex; }
+  .nav-links.open { display: flex; max-height: calc(100svh - 64px); overflow-y: auto; }
   .nav-links li a { color: rgba(255,255,255,.75) !important; padding: .7rem 1rem; border-radius: 8px; }
   .nav-links li a:hover { color: #fff !important; background: rgba(255,255,255,.08) !important; }
   .drop { position: static; box-shadow: none; border: none; padding: 0 0 .5rem 1rem; background: transparent; }
@@ -126,7 +126,9 @@ img { max-width: 100%; }
 .hero-glow { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(212, 74, 100, 0.15) 0%, transparent 70%); right: -100px; top: 50%; transform: translateY(-50%); pointer-events: none; }
 .hero-ring { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 500px; height: 500px; border: 1px solid rgba(212, 74, 100, 0.15); border-radius: 50%; pointer-events: none; }
 .hero-ring::before { content: ''; position: absolute; inset: 50px; border: 1px solid rgba(212, 74, 100, 0.08); border-radius: 50%; }
-.hero-content { position: relative; z-index: 2; max-width: 660px; }
+.hero-content { position: relative; z-index: 2; }
+.hero-photo img { width:100%; height:460px; object-fit:cover; object-position:top center; border-radius:20px; display:block; box-shadow:0 24px 70px rgba(0,0,0,.5); -webkit-mask-image:linear-gradient(to bottom, black 50%, transparent 92%); mask-image:linear-gradient(to bottom, black 50%, transparent 92%); }
+.hero-photo { position:relative; }
 .hero h1 { color: #fff; margin-bottom: 1.3rem; }
 .hero h1 em { font-style: italic; color: var(--gold-l); }
 .hero .lead { color: rgba(255,255,255,.7); max-width: 520px; margin-bottom: 2rem; }
@@ -186,6 +188,11 @@ img { max-width: 100%; }
 .event-info h4 { font-family: var(--font-corps); font-size: 1rem; font-weight: 600; color: var(--rose-d); margin-bottom: .2rem; }
 .event-loc { font-size: .78rem; color: var(--muted); display: flex; align-items: center; gap: .25rem; margin-top: .3rem; }
 .event-loc svg { width: 10px; height: 10px; }
+.event-prix { font-size: .75rem; font-weight: 700; color: var(--gold); margin-top: .35rem; }
+a.event-card { display: block; text-decoration: none; color: inherit; }
+a.event-card:hover .event-inner { box-shadow: var(--shadow); transform: translateY(-2px); }
+.event-inner { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: .25s; }
+.event-inner .event { border: 0; border-radius: 0; padding: .9rem; }
 
 /* ---- DON BANNER ---- */
 .don-banner { background: linear-gradient(135deg, #0A1B24 0%, var(--rose-d) 50%, var(--gold-d) 100%); border-radius: var(--radius-lg); padding: 3.5rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
@@ -241,6 +248,11 @@ footer li a { color: rgba(255,255,255,.45); font-size: .84rem; transition: .2s; 
 footer li a:hover { color: var(--rose-l); }
 .foot-bottom { border-top: 1px solid rgba(255,255,255,.07); padding-top: 1.2rem; margin-top: 2.5rem; font-size: .74rem; color: rgba(255,255,255,.25); display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
 .foot-bottom a { color: rgba(255,255,255,.25); text-decoration: none; }
+
+/* ---- ONGLETS pill ---- */
+.tab-pill { padding: .6rem 1.4rem; border-radius: 50px; font-weight: 600; font-size: .88rem; background: var(--white); color: var(--muted); border: 2px solid var(--border); cursor: pointer; transition: .2s; white-space: nowrap; }
+.tab-pill.active { background: var(--rose-d); color: #fff; border-color: var(--rose-d); box-shadow: 0 4px 14px rgba(45,123,158,.25); }
+.tab-pill:hover:not(.active) { border-color: var(--rose); color: var(--rose); }
 
 /* ---- ANIMATIONS ---- */
 .fu { opacity: 0; transform: translateY(24px); transition: .6s; }

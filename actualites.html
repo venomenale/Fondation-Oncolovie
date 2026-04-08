@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Actualités — Fondation Oncolovie</title>
+  <title>Agenda — Fondation Oncolovie</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <meta name="description" content="Toutes les actualités et événements de la Fondation Oncolovie.">
+  <meta name="description" content="Toutes les actualités, événements à venir et événements passés de la Fondation Oncolovie.">
 </head>
 <body>
 <nav class="nav-wrap" id="nav">
@@ -24,54 +23,111 @@
         <li><a href="index.html">Accueil</a></li>
         <li><a href="la-fondation.html">La Fondation</a></li>
         <li class="has-drop"><a href="projets.html">Nos projets ▾</a><div class="drop">
-      <a href="projets.html#bons-cadeaux">Bons cadeaux – aidants proches</a>
-      <a href="projets.html#soins-palliatifs">Les soins palliatifs</a>
-      <a href="projets.html#psychomotricite">Module de psychomotricité</a>
-      <a href="projets.html#aide-financiere">Aide financière aux parents</a>
-      <a href="projets.html#reflexologie">Réflexologie plantaire</a>
-      <a href="projets.html#bien-etre-had">Bien-être & HAD</a>
-    </div></li>
-        <li><a href="agenda.html">Agenda</a></li>
-        <li><a href="actualites.html">Actualités</a></li>
-        <li><a href="historique.html">Historique</a></li>
-        <li class="has-drop"><a href="soutien.html">Soutien ▾</a><div class="drop">
-      <a href="soutien.html#don">Faites un don</a>
-      <a href="soutien.html#donation">Effectuez une donation</a>
-      <a href="soutien.html#legs">Legs en duo</a>
-    </div></li>
+          <a href="projets.html#bons-cadeaux">Bons cadeaux – aidants proches</a>
+          <a href="projets.html#soins-palliatifs">Les soins palliatifs</a>
+          <a href="projets.html#psychomotricite">Module de psychomotricité</a>
+          <a href="projets.html#aide-financiere">Aide financière aux parents</a>
+          <a href="projets.html#reflexologie">Réflexologie plantaire</a>
+          <a href="projets.html#bien-etre-had">Bien-être & HAD</a>
+        </div></li>
+        <li><a href="actualites.html">Agenda</a></li>
+                <li><a href="soutien.html">Soutien</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="soutien.html#don" class="nav-don">❤ Faire un don</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
 <section class="page-hero">
   <div class="container" style="position:relative;z-index:2;">
-    <div class="bc"><a href="index.html">Accueil</a><span>›</span><span class="cur">Actualités</span></div>
-    <h1>Actualités</h1>
-    <p class="lead mt-2">Suivez toutes les nouvelles et événements de la Fondation Oncolovie.</p>
+    <div class="bc"><a href="index.html">Accueil</a><span>›</span><span class="cur">Agenda</span></div>
+    <h1>Agenda</h1>
+    <p class="lead mt-2">Retrouvez tous nos événements à venir, nos actualités et l'historique de la Fondation Oncolovie.</p>
   </div>
 </section>
+
 <section class="sec-sm bg-warm">
   <div class="container">
-    <div class="d-flex gap-2 flex-wrap align-items-center">
-      <span style="font-size:.8rem;font-weight:500;color:var(--muted);">Filtrer :</span>
-      <button class="amt on filter-btn" onclick="filter(this,'Tout')">Tout</button>
-      <button class="amt filter-btn" onclick="filter(this,'Événement')">Événements</button>
-      <button class="amt filter-btn" onclick="filter(this,'Actualité')">Actualités</button>
+
+    <!-- Onglets principaux (pill tabs) -->
+    <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:.75rem;">
+      <button class="tab-pill active" id="tab-actu" onclick="switchTab('actu')">
+        Actualités &amp; événements
+      </button>
+      <button class="tab-pill" id="tab-hist" onclick="switchTab('hist')">
+        Événements passés
+      </button>
     </div>
+
+    <!-- Sous-filtres Actualités (visibles par défaut) -->
+    <div id="filters-actu" style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;">
+      <span style="font-size:.78rem;font-weight:500;color:var(--muted);">Filtrer :</span>
+      <button class="amt filter-btn on" onclick="filterActu(this,'Tout')">Tout</button>
+      <button class="amt filter-btn" onclick="filterActu(this,'Événement')">Événements</button>
+      <button class="amt filter-btn" onclick="filterActu(this,'Actualité')">Actualités</button>
+    </div>
+
+    <!-- Sous-filtres Événements passés (cachés par défaut) -->
+    <div id="filters-hist" style="display:none;gap:.5rem;flex-wrap:wrap;align-items:center;">
+      <span style="font-size:.78rem;font-weight:500;color:var(--muted);">Filtrer :</span>
+      <button class="amt filter-btn on" onclick="filterHist(this,'Tout')">Tout</button>
+      <button class="amt filter-btn" onclick="filterHist(this,'Golf')">Golf</button>
+      <button class="amt filter-btn" onclick="filterHist(this,'Spectacle')">Spectacles</button>
+      <button class="amt filter-btn" onclick="filterHist(this,'Moto')">Moto</button>
+      <button class="amt filter-btn" onclick="filterHist(this,'Solidarité')">Solidarité</button>
+      <button class="amt filter-btn" onclick="filterHist(this,'Exposition')">Exposition</button>
+    </div>
+
   </div>
 </section>
+
 <section class="sec">
   <div class="container">
-    <div class="row g-3" id="news-all">
-      <div class="col-md-4"><div class="skeleton"></div></div>
-      <div class="col-md-4"><div class="skeleton"></div></div>
-      <div class="col-md-4"><div class="skeleton"></div></div>
+
+    <!-- Panel Actualités -->
+    <div id="panel-actu">
+      <div class="row g-3" id="news-all">
+        <div class="col-md-4"><div class="skeleton"></div></div>
+        <div class="col-md-4"><div class="skeleton"></div></div>
+        <div class="col-md-4"><div class="skeleton"></div></div>
+      </div>
+      <div id="no-r-actu" style="display:none;" class="text-center py-5">
+        <p>Aucun article dans cette catégorie.</p>
+      </div>
     </div>
-    <div id="no-r" style="display:none;" class="text-center py-5"><p>Aucun article dans cette catégorie.</p></div>
+
+    <!-- Panel Événements passés -->
+    <div id="panel-hist" style="display:none;">
+      <div class="row g-3" id="hist-all">
+        <div class="col-md-4"><div class="skeleton"></div></div>
+        <div class="col-md-4"><div class="skeleton"></div></div>
+        <div class="col-md-4"><div class="skeleton"></div></div>
+      </div>
+      <div id="no-r-hist" style="display:none;" class="text-center py-5">
+        <p>Aucun événement dans cette catégorie.</p>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<section class="sec-md bg-warm">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-7 fu">
+        <div class="tag">Participer</div>
+        <h2>Organisez un événement au profit d'Oncolovie</h2>
+        <div class="divider"></div>
+        <p>Vous souhaitez organiser une collecte, un événement sportif ou artistique au profit de la Fondation ? Nous sommes là pour vous accompagner.</p>
+      </div>
+      <div class="col-lg-4 offset-lg-1 text-center fu d1">
+        <a href="contact.html" class="btn btn-rose">Nous contacter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="container">
     <div class="row gy-4">
@@ -86,9 +142,9 @@
           <li><a href="index.html">Accueil</a></li>
           <li><a href="la-fondation.html">La Fondation</a></li>
           <li><a href="projets.html">Nos projets</a></li>
-          <li><a href="agenda.html">Agenda</a></li>
-          <li><a href="actualites.html">Actualités</a></li>
-          <li><a href="historique.html">Historique</a></li>
+          
+          <li><a href="actualites.html">Agenda</a></li>
+          <li><a href="actualites.html#passes">Événements passés</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2">
@@ -103,8 +159,8 @@
       <div class="col-lg-4">
         <h5>Coordonnées</h5>
         <p style="font-size:.85rem;">Clos Perly 14b – 4052 Chaudfontaine<br>
-          <a href="mailto:info@oncolovie.be" style="color:rgba(255,255,255,.45);">info@oncolovie.be</a></p>
-        <p style="font-size:.74rem;margin-top:.6rem;color:rgba(255,255,255,.22);">N° d'entreprise : 0762.941.820</p>
+          <a href="mailto:info@oncolovie.be" class="footer-link">info@oncolovie.be</a></p>
+        <p class="foot-nr mt-2">N° d'entreprise : 0762.941.820</p>
       </div>
     </div>
     <div class="foot-bottom">
@@ -113,8 +169,10 @@
     </div>
   </div>
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+/* ---- NAV ---- */
 const navEl = document.getElementById('nav');
 if(navEl) window.addEventListener('scroll', function(){ navEl.classList.toggle('solid', window.scrollY > 50); });
 
@@ -162,28 +220,53 @@ const obs = new IntersectionObserver(function(entries){
   entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); });
 }, {threshold: 0.1});
 document.querySelectorAll('.fu').forEach(function(el){ obs.observe(el); });
-</script>
-<script>
+
+/* ---- ONGLETS ---- */
+var currentTab = 'actu';
+
+function switchTab(tab){
+  currentTab = tab;
+  /* Onglets */
+  document.getElementById('tab-actu').classList.toggle('active', tab === 'actu');
+  document.getElementById('tab-hist').classList.toggle('active', tab === 'hist');
+  /* Panels */
+  document.getElementById('panel-actu').style.display = tab === 'actu' ? '' : 'none';
+  document.getElementById('panel-hist').style.display = tab === 'hist' ? '' : 'none';
+  /* Sous-filtres — pas de classe Bootstrap, contrôle pur inline */
+  var fa = document.getElementById('filters-actu');
+  var fh = document.getElementById('filters-hist');
+  fa.style.display = tab === 'actu' ? 'flex' : 'none';
+  fh.style.display = tab === 'hist' ? 'flex' : 'none';
+  /* Hash URL */
+  if(tab === 'hist') history.replaceState(null, '', '#passes');
+  else history.replaceState(null, '', window.location.pathname);
+}
+
+/* ---- ACTUALITÉS ---- */
 var allNews = [];
 function fmtDate(s){ return new Date(s).toLocaleDateString('fr-BE',{day:'numeric',month:'long',year:'numeric'}); }
-function buildCard(item){
+
+function buildNewsCard(item){
   var img = item.image
     ? '<div class="news-thumb"><img src="' + item.image + '" alt="' + item.titre + '" loading="lazy"><span class="news-badge">' + item.tag + '</span></div>'
     : '<div class="news-thumb-fallback"></div>';
   return '<div class="col-md-4" data-tag="' + item.tag + '"><div class="news-card">' + img + '<div class="news-body"><div class="news-date">' + fmtDate(item.date) + '</div><h4>' + item.titre + '</h4><p>' + item.extrait + '</p><a href="' + item.lien + '" class="more-link">Lire la suite <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div></div></div>';
 }
+
 function renderNews(data){
   var g = document.getElementById('news-all');
   if(!g) return;
-  if(!data.length){ g.innerHTML=''; document.getElementById('no-r').style.display='block'; return; }
-  document.getElementById('no-r').style.display='none';
-  g.innerHTML = data.map(buildCard).join('');
+  if(!data.length){ g.innerHTML=''; document.getElementById('no-r-actu').style.display='block'; return; }
+  document.getElementById('no-r-actu').style.display='none';
+  g.innerHTML = data.map(buildNewsCard).join('');
 }
-function filter(btn, tag){
-  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('on'); });
+
+function filterActu(btn, tag){
+  document.querySelectorAll('#filters-actu .filter-btn').forEach(function(b){ b.classList.remove('on'); });
   btn.classList.add('on');
   renderNews(tag === 'Tout' ? allNews : allNews.filter(function(n){ return n.tag === tag; }));
 }
+
 fetch('./news.json')
   .then(function(r){ return r.json(); })
   .then(function(d){ allNews = d; renderNews(d); })
@@ -191,6 +274,43 @@ fetch('./news.json')
     var g = document.getElementById('news-all');
     if(g) g.innerHTML = '<div class="col-12 text-center py-4"><p>Actualités bientôt disponibles.</p></div>';
   });
+
+/* ---- ÉVÉNEMENTS PASSÉS ---- */
+var allHist = [];
+
+function buildHistCard(item){
+  var img = item.image
+    ? '<div class="news-thumb"><img src="' + item.image + '" alt="' + item.titre + '" loading="lazy"><span class="news-badge">' + item.tag + '</span></div>'
+    : '<div class="news-thumb" style="background:linear-gradient(135deg,var(--rose),var(--rose-l));position:relative;"><span class="news-badge" style="position:absolute;top:.8rem;left:.8rem;">' + item.tag + '</span></div>';
+  return '<div class="col-md-4" data-tag="' + item.tag + '"><div class="news-card">' + img + '<div class="news-body"><div class="news-date">' + fmtDate(item.date) + '</div><h4>' + item.titre + '</h4><p>' + item.extrait + '</p><a href="' + item.lien + '" class="more-link">Lire la suite <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div></div></div>';
+}
+
+function renderHist(data){
+  var g = document.getElementById('hist-all');
+  if(!g) return;
+  if(!data.length){ g.innerHTML=''; document.getElementById('no-r-hist').style.display='block'; return; }
+  document.getElementById('no-r-hist').style.display='none';
+  g.innerHTML = data.map(buildHistCard).join('');
+}
+
+function filterHist(btn, tag){
+  document.querySelectorAll('#filters-hist .filter-btn').forEach(function(b){ b.classList.remove('on'); });
+  btn.classList.add('on');
+  renderHist(tag === 'Tout' ? allHist : allHist.filter(function(n){ return n.tag === tag; }));
+}
+
+fetch('./historique.json')
+  .then(function(r){ return r.json(); })
+  .then(function(d){ allHist = d; renderHist(d); })
+  .catch(function(){
+    var g = document.getElementById('hist-all');
+    if(g) g.innerHTML = '<div class="col-12 text-center py-4"><p>Historique bientôt disponible.</p></div>';
+  });
+
+/* ---- Activation via hash #passes ---- */
+if(window.location.hash === '#passes'){
+  switchTab('hist');
+}
 </script>
 </body>
 </html>
